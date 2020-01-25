@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3716486819649891626}
   - component: {fileID: 3716486819649891627}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,3 +122,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 100000
+  prefix: P1
