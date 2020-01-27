@@ -124,3 +124,5 @@ MonoBehaviour:
   rotation: 100000
   acceleration: 100000
   prefix: P1
+  rotationSpeed: 1
+  maxSpeed: 10
