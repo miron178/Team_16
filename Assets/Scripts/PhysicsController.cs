@@ -11,6 +11,8 @@ public class PhysicsController : MonoBehaviour {
 	[SerializeField]
 	private string prefix = "P1";
 	[SerializeField]
+	private float rotationSpeed = 1f;
+	[SerializeField]
 	private float maxSpeed = 1f;
 
 	// Start is called before the first frame update
@@ -23,13 +25,19 @@ public class PhysicsController : MonoBehaviour {
 		float horizontal = rotation   * Input.GetAxis(prefix + "Horizontal");
 		float vertical = acceleration * Input.GetAxis(prefix + "Vertical");
 
+#if false
+		rb.AddForce(Vector3.right * horizontal * Time.fixedDeltaTime);
+#endif
 		rb.AddRelativeForce(Vector3.forward * vertical * Time.fixedDeltaTime);
 		rb.AddRelativeTorque(Vector3.up * horizontal * Time.fixedDeltaTime);
 	}
 
 	void LateUpdate() {
-		if (rb.angularVelocity.magnitude > maxSpeed) {
-			rb.angularVelocity = rb.angularVelocity.normalized * maxSpeed;
+		if (rb.angularVelocity.magnitude > rotationSpeed) {
+			rb.angularVelocity = rb.angularVelocity.normalized * rotationSpeed;
+		}
+		if (rb.velocity.magnitude > maxSpeed) {
+			rb.velocity = rb.velocity.normalized * maxSpeed;
 		}
 	}
 }
