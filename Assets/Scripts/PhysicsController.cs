@@ -26,7 +26,7 @@ public class PhysicsController : MonoBehaviour {
 		float vertical = acceleration * Input.GetAxis(prefix + "Vertical");
 
 #if true
-		rb.AddForce(Vector3.right * horizontal * Time.fixedDeltaTime);
+		rb.AddRelativeForce(Vector3.right * horizontal * Time.fixedDeltaTime);
 #endif
 		rb.AddRelativeForce(Vector3.forward * vertical * Time.fixedDeltaTime);
 #if false
