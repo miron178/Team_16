@@ -25,11 +25,13 @@ public class PhysicsController : MonoBehaviour {
 		float horizontal = rotation   * Input.GetAxis(prefix + "Horizontal");
 		float vertical = acceleration * Input.GetAxis(prefix + "Vertical");
 
-#if false
+#if true
 		rb.AddForce(Vector3.right * horizontal * Time.fixedDeltaTime);
 #endif
 		rb.AddRelativeForce(Vector3.forward * vertical * Time.fixedDeltaTime);
+#if false
 		rb.AddRelativeTorque(Vector3.up * horizontal * Time.fixedDeltaTime);
+#endif
 	}
 
 	void LateUpdate() {
