@@ -126,3 +126,4 @@ MonoBehaviour:
   prefix: P1
   rotationSpeed: 1
   maxSpeed: 10
+  jumpSpeed: 10
