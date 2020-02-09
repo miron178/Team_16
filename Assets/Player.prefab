@@ -219,7 +219,8 @@ MonoBehaviour:
   prefix: P1
   rotationSpeed: 1
   maxSpeed: 10
-  jumpForce: 100000
+  jumpForce: 500000
+  groundCheck: {fileID: 7406928243271669397}
 --- !u!1 &7406928243271669397
 GameObject:
   m_ObjectHideFlags: 0
