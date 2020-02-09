@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿#define NORMAL_CONTROLS
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,15 +34,14 @@ public class PhysicsController : MonoBehaviour {
 		float vertical   = acceleration * Input.GetAxis(prefix + "Vertical");
 		float jump       = jumpForce * Input.GetAxis(prefix + "Jump");
 
+#if NORMAL_CONTROLS
 		//move left and right
-#if true
 		rb.AddRelativeForce(Vector3.right * horizontal * Time.fixedDeltaTime);
-#endif
-		rb.AddRelativeForce(Vector3.forward * vertical * Time.fixedDeltaTime);
+#else
 		//rotate left and right
-#if false
 		rb.AddRelativeTorque(Vector3.up * horizontal * Time.fixedDeltaTime);
 #endif
+		rb.AddRelativeForce(Vector3.forward * vertical * Time.fixedDeltaTime);
 
 		//Jump
 		grounded = Physics.Linecast(transform.position, groundCheck.transform.position);
