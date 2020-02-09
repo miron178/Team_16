@@ -16,6 +16,10 @@ public class PhysicsController : MonoBehaviour {
 	private float maxSpeed = 1f;
 	[SerializeField]
 	private float jumpForce = 100000f;
+	[SerializeField]
+	private GameObject groundCheck;
+	private bool grounded = false;
+
 
 	// Start is called before the first frame update
 	void Start() {
@@ -37,10 +41,12 @@ public class PhysicsController : MonoBehaviour {
 #if false
 		rb.AddRelativeTorque(Vector3.up * horizontal * Time.fixedDeltaTime);
 #endif
+
 		//Jump
-#if true
-		rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
-#endif
+		grounded = Physics.Linecast(transform.position, groundCheck.transform.position);
+		if (grounded) {
+			rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
+		}
 	}
 
 	void LateUpdate() {
