@@ -14,6 +14,8 @@ TagManager:
   - Des2
   - Des3
   - Des4
+  - toy
+  - stainRemover
   layers:
   - Default
   - TransparentFX
