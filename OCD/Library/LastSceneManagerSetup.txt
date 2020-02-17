@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/anna/Scenes/SampleScene.unity
+- path: Assets/anna/Scenes/bedroom.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

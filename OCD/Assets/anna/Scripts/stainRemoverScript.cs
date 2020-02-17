@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stain : MonoBehaviour
+public class stainRemoverScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {

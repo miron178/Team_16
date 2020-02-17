@@ -16,6 +16,7 @@ TagManager:
   - Des4
   - toy
   - stainRemover
+  - bedroom
   layers:
   - Default
   - TransparentFX
