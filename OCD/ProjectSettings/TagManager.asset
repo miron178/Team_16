@@ -17,6 +17,7 @@ TagManager:
   - toy
   - stainRemover
   - bedroom
+  - kitchen
   layers:
   - Default
   - TransparentFX
