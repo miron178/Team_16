@@ -4,20 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - wrench
-  - extinguisher
-  - wipe
-  - destination
-  - Player2
-  - Player3
-  - Player4
-  - Des2
-  - Des3
-  - Des4
-  - toy
-  - stainRemover
-  - bedroom
-  - kitchen
+  - Ground
   layers:
   - Default
   - TransparentFX

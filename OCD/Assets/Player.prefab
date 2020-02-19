@@ -211,15 +211,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3716486819649891620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52af09c121fead042a1ed0e049bb0dd1, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a0e2f762a6b161419c2fd8b71d72702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation: 100000
+  rotation: 10000
   acceleration: 100000
   prefix: P1
   rotationSpeed: 1
-  maxSpeed: 10
-  jumpForce: 500000
+  maxSpeed: 1
+  jumpForce: 100000
   groundCheck: {fileID: 7406928243271669397}
 --- !u!1 &7406928243271669397
 GameObject:

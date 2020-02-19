@@ -28,13 +28,18 @@ public class PhysicsController : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate() {
-		float horizontal = rotation     * Input.GetAxis(prefix + "Horizontal");
+		float horizontal = acceleration * Input.GetAxis(prefix + "Horizontal");
 		float vertical   = acceleration * Input.GetAxis(prefix + "Vertical");
 		float jump       = jumpForce * Input.GetAxis(prefix + "Jump");
 
 #if NORMAL_CONTROLS
 		//move left and right
-		rb.AddRelativeForce(Vector3.right * horizontal * Time.fixedDeltaTime);
+		if(Mathf.Abs(horizontal) > 0f) {
+			Vector3 velocity = Vector3.right * horizontal * Time.fixedDeltaTime;
+			Debug.Log("Velocity:: " + velocity);
+			rb.AddRelativeForce(velocity);
+		}
+		
 #else
 		//rotate left and right
 		rb.AddRelativeTorque(Vector3.up * horizontal * Time.fixedDeltaTime);
@@ -44,16 +49,16 @@ public class PhysicsController : MonoBehaviour {
 		//Jump
 		bool grounded = Physics.Linecast(transform.position, groundCheck.transform.position);
 		if (grounded) {
-			rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
+			//rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
 		}
 	}
 
 	void LateUpdate() {
 		if (rb.angularVelocity.magnitude > rotationSpeed) {
-			rb.angularVelocity = rb.angularVelocity.normalized * rotationSpeed;
+			//rb.angularVelocity = rb.angularVelocity.normalized * rotationSpeed;
 		}
 		if (rb.velocity.magnitude > maxSpeed) {
-			rb.velocity = rb.velocity.normalized * maxSpeed;
+			//rb.velocity = rb.velocity.normalized * maxSpeed;
 		}
 	}
 }
