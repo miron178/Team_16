@@ -34,12 +34,7 @@ public class PhysicsController : MonoBehaviour {
 
 #if NORMAL_CONTROLS
 		//move left and right
-		if(Mathf.Abs(horizontal) > 0f) {
-			Vector3 velocity = Vector3.right * horizontal * Time.fixedDeltaTime;
-			Debug.Log("Velocity:: " + velocity);
-			rb.AddRelativeForce(velocity);
-		}
-		
+		rb.AddRelativeForce(Vector3.right * horizontal * Time.fixedDeltaTime);
 #else
 		//rotate left and right
 		rb.AddRelativeTorque(Vector3.up * horizontal * Time.fixedDeltaTime);
