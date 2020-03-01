@@ -1,19 +1,13 @@
-﻿#define NORMAL_CONTROLS
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PhysicsController : MonoBehaviour {
 	[SerializeField]
-	private float rotation = 10000f;
-	[SerializeField]
 	private float acceleration = 100000f;
 	private Rigidbody rb;
 	[SerializeField]
 	private string prefix = "P1";
-	[SerializeField]
-	private float rotationSpeed = 1f;
 	[SerializeField]
 	private float maxSpeed = 1f;
 	[SerializeField]
@@ -32,13 +26,7 @@ public class PhysicsController : MonoBehaviour {
 		float vertical   = acceleration * Input.GetAxis(prefix + "Vertical");
 		float jump       = jumpForce * Input.GetAxis(prefix + "Jump");
 
-#if NORMAL_CONTROLS
-		//move left and right
 		rb.AddRelativeForce(Vector3.right * horizontal * Time.fixedDeltaTime);
-#else
-		//rotate left and right
-		rb.AddRelativeTorque(Vector3.up * horizontal * Time.fixedDeltaTime);
-#endif
 		rb.AddRelativeForce(Vector3.forward * vertical * Time.fixedDeltaTime);
 
 		//Jump
@@ -49,9 +37,6 @@ public class PhysicsController : MonoBehaviour {
 	}
 
 	void LateUpdate() {
-		if (rb.angularVelocity.magnitude > rotationSpeed) {
-			//rb.angularVelocity = rb.angularVelocity.normalized * rotationSpeed;
-		}
 		if (rb.velocity.magnitude > maxSpeed) {
 			//rb.velocity = rb.velocity.normalized * maxSpeed;
 		}
