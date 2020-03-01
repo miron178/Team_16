@@ -26,8 +26,8 @@ public class PhysicsController : MonoBehaviour {
 		float vertical   = acceleration * Input.GetAxis(prefix + "Vertical");
 		float jump       = jumpForce * Input.GetAxis(prefix + "Jump");
 
-		rb.AddRelativeForce(Vector3.right * horizontal * Time.fixedDeltaTime);
-		rb.AddRelativeForce(Vector3.forward * vertical * Time.fixedDeltaTime);
+		Vector3 force = new Vector3(horizontal, 0, vertical);
+		rb.AddRelativeForce(force * Time.fixedDeltaTime);
 
 		//Jump
 		bool grounded = Physics.Linecast(transform.position, groundCheck.transform.position);
