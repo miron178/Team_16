@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stainRemoverScript : MonoBehaviour
+public class removeAsh : MonoBehaviour
 {
+    public ash ashDust;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "wipe")
+        if (other.tag == "ash")
         {
-            gameObject.SetActive(false);
+            ashDust.cleaned();
         }
-       
     }
 }

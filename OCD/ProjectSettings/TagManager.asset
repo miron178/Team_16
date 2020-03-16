@@ -6,6 +6,15 @@ TagManager:
   tags:
   - Ground
   - PickUp
+  - bedroom
+  - toy
+  - destination
+  - stainRemover
+  - wipe
+  - wrench
+  - kitchen
+  - extinguisher
+  - ash
   layers:
   - Default
   - TransparentFX
