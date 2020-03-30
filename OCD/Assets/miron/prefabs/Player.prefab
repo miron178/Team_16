@@ -264,7 +264,7 @@ MonoBehaviour:
   prefix: P1
   maxSpeed: 10
   jumpForce: 1000000
-  groundCheck: {fileID: 7406928243271669397}
+  jumpCheck: {fileID: 7406928243271669397}
 --- !u!114 &1026157541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +281,7 @@ MonoBehaviour:
   prefix: P2
   maxSpeed: 10
   jumpForce: 1000000
-  groundCheck: {fileID: 7406928243271669397}
+  jumpCheck: {fileID: 7406928243271669397}
 --- !u!1 &7406928243271669397
 GameObject:
   m_ObjectHideFlags: 0
