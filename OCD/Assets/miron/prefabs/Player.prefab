@@ -263,7 +263,7 @@ MonoBehaviour:
   acceleration: 100000
   prefix: P1
   maxSpeed: 10
-  jumpForce: 100000
+  jumpForce: 1000000
   groundCheck: {fileID: 7406928243271669397}
 --- !u!114 &1026157541
 MonoBehaviour:
@@ -280,7 +280,7 @@ MonoBehaviour:
   acceleration: 100000
   prefix: P2
   maxSpeed: 10
-  jumpForce: 100000
+  jumpForce: 1000000
   groundCheck: {fileID: 7406928243271669397}
 --- !u!1 &7406928243271669397
 GameObject:
