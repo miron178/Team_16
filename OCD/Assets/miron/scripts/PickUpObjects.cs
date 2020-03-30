@@ -37,8 +37,9 @@ public class PickUpObjects : MonoBehaviour
 		//gameObject.transform.position = unchanged
 		gameObject.transform.parent = null;
 	}
+
 	private void OnTriggerEnter(Collider other) {
-		if (other.gameObject.tag == "PickUp") {
+		if (other.gameObject.layer == 8) {
 			objectInRange = other.gameObject;
 		}
 	}
