@@ -38,7 +38,7 @@ public class PhysicsController : MonoBehaviour {
 
 	void LateUpdate() {
 		if (rb.velocity.magnitude > maxSpeed) {
-			//rb.velocity = rb.velocity.normalized * maxSpeed;
+			rb.velocity = rb.velocity.normalized * maxSpeed;
 		}
 	}
 }
