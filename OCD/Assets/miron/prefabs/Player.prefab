@@ -249,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 100000
   prefix: P1
-  maxSpeed: 1
+  maxSpeed: 10
   jumpForce: 100000
   groundCheck: {fileID: 7406928243271669397}
 --- !u!114 &5502283957128735084
