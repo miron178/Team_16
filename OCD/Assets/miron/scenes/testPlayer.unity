@@ -308,9 +308,9 @@ GameObject:
   - component: {fileID: 165030055}
   - component: {fileID: 165030054}
   - component: {fileID: 165030058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
-  m_TagString: PickUp
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -520,6 +520,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: jumpForce
+      value: 1000000
+      objectReference: {fileID: 0}
     - target: {fileID: 3716486819649891620, guid: a2a28846b59cc1c498e2b2b23c7e3347,
         type: 3}
       propertyPath: m_Name
@@ -579,6 +583,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8237228719481999863, guid: a2a28846b59cc1c498e2b2b23c7e3347,
+        type: 3}
+      propertyPath: jumpForce
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1026157541, guid: a2a28846b59cc1c498e2b2b23c7e3347, type: 3}
+      propertyPath: jumpForce
+      value: 1000000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a28846b59cc1c498e2b2b23c7e3347, type: 3}

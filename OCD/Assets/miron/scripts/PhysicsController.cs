@@ -13,11 +13,13 @@ public class PhysicsController : MonoBehaviour {
 	[SerializeField]
 	private float jumpForce = 100000f;
 	[SerializeField]
-	private GameObject groundCheck;
+	private GameObject jumpCheck;
+	private int groundLayer;
 
 	// Start is called before the first frame update
 	void Start() {
 		rb = GetComponent<Rigidbody>();
+		groundLayer = LayerMask.NameToLayer("Ground"); 
 	}
 
 	// Update is called once per frame
@@ -30,7 +32,7 @@ public class PhysicsController : MonoBehaviour {
 		rb.AddRelativeForce(force * Time.fixedDeltaTime);
 
 		//Jump
-		bool grounded = Physics.Linecast(transform.position, groundCheck.transform.position);
+		bool grounded = Physics.Linecast(transform.position, jumpCheck.transform.position, 1 << groundLayer);
 		if (grounded) {
 			rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
 		}

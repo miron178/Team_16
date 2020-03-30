@@ -8,6 +8,11 @@ public class PickUpObjects : MonoBehaviour
 	private Transform des;
 	private GameObject objectInRange = null;
 	private GameObject holding = null;
+	private int pickUpLayer;
+
+	void Start() {
+		pickUpLayer = LayerMask.NameToLayer("PickUp");
+	}
 
 	// Update is called once per frame
 	void Update()
@@ -39,7 +44,7 @@ public class PickUpObjects : MonoBehaviour
 	}
 
 	private void OnTriggerEnter(Collider other) {
-		if (other.gameObject.layer == 8) {
+		if (other.gameObject.layer == pickUpLayer) {
 			objectInRange = other.gameObject;
 		}
 	}
