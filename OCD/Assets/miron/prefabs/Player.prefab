@@ -247,12 +247,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0e2f762a6b161419c2fd8b71d72702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation: 10000
   acceleration: 100000
   prefix: P1
-  rotationSpeed: 1
-  maxSpeed: 1
-  jumpForce: 100000
+  maxSpeed: 10
+  jumpForce: 1000000
   groundCheck: {fileID: 7406928243271669397}
 --- !u!114 &5502283957128735084
 MonoBehaviour:
@@ -279,12 +277,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0e2f762a6b161419c2fd8b71d72702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation: 10000
   acceleration: 100000
   prefix: P2
-  rotationSpeed: 1
   maxSpeed: 10
-  jumpForce: 100000
+  jumpForce: 1000000
   groundCheck: {fileID: 7406928243271669397}
 --- !u!1 &7406928243271669397
 GameObject:
@@ -310,7 +306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7406928243271669397}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.661, z: 0}
+  m_LocalPosition: {x: 0, y: -0.521, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3716486819649891624}
