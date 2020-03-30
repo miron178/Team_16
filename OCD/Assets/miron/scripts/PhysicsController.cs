@@ -32,7 +32,7 @@ public class PhysicsController : MonoBehaviour {
 		//Jump
 		bool grounded = Physics.Linecast(transform.position, groundCheck.transform.position);
 		if (grounded) {
-			rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
+			//rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
 		}
 	}
 
