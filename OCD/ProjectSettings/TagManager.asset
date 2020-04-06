@@ -15,6 +15,7 @@ TagManager:
   - kitchen
   - extinguisher
   - ash
+  - plate
   layers:
   - Default
   - TransparentFX
