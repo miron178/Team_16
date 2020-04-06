@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 5502283957128735084}
   - component: {fileID: 8237228719481999863}
   - component: {fileID: 1026157541}
+  - component: {fileID: 780581494}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -282,6 +283,19 @@ MonoBehaviour:
   maxSpeed: 10
   jumpForce: 1000000
   jumpCheck: {fileID: 7406928243271669397}
+--- !u!135 &780581494
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3716486819649891620}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7406928243271669397
 GameObject:
   m_ObjectHideFlags: 0
