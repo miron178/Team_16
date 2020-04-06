@@ -289,7 +289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108207529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.212547, y: -0.25, z: 22.361465}
+  m_LocalPosition: {x: 18.29, y: -0.25, z: 22.361465}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -494,25 +494,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &780581493 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3716486819649891620, guid: a2a28846b59cc1c498e2b2b23c7e3347,
-    type: 3}
-  m_PrefabInstance: {fileID: 2063255516}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &780581494
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780581493}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2063255516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -520,10 +501,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: jumpForce
-      value: 1000000
-      objectReference: {fileID: 0}
     - target: {fileID: 3716486819649891620, guid: a2a28846b59cc1c498e2b2b23c7e3347,
         type: 3}
       propertyPath: m_Name
@@ -583,15 +560,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237228719481999863, guid: a2a28846b59cc1c498e2b2b23c7e3347,
-        type: 3}
-      propertyPath: jumpForce
-      value: 1000000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026157541, guid: a2a28846b59cc1c498e2b2b23c7e3347, type: 3}
-      propertyPath: jumpForce
-      value: 1000000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a28846b59cc1c498e2b2b23c7e3347, type: 3}
