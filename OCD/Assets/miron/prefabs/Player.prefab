@@ -281,7 +281,7 @@ MonoBehaviour:
   acceleration: 100000
   prefix: P2
   maxSpeed: 10
-  jumpForce: 1000000
+  jumpForce: 2000000
   jumpCheck: {fileID: 7406928243271669397}
 --- !u!135 &780581494
 SphereCollider:
