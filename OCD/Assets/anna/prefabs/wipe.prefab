@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 264921786817162290}
   - component: {fileID: 264921786817162291}
   - component: {fileID: 264921786817162252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d940adb6971af6640af0ef59deeeec83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pickup: {fileID: 264921788309844949}
+  _pickup: {fileID: 0}
 --- !u!1 &264921788309844947
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,9 +80,8 @@ GameObject:
   - component: {fileID: 264921788309844951}
   - component: {fileID: 264921788309844944}
   - component: {fileID: 264921788309844945}
-  - component: {fileID: 264921788309844949}
   - component: {fileID: 4702592792529697269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,22 +177,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &264921788309844949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264921788309844947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 760944302199f1e4c951130e0354cf33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  des: {fileID: 0}
-  des2: {fileID: 0}
-  des3: {fileID: 0}
-  des4: {fileID: 0}
 --- !u!114 &4702592792529697269
 MonoBehaviour:
   m_ObjectHideFlags: 0
