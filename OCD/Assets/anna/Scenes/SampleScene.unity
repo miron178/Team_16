@@ -4899,36 +4899,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4702592792529697269, guid: d60284873d97c804eb0912095a1eccad,
         type: 3}
       propertyPath: wettedWipe
       value: 
       objectReference: {fileID: 1596822995}
-    - target: {fileID: 264921788309844945, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844949, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: des
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d60284873d97c804eb0912095a1eccad, type: 3}
 --- !u!1 &1379314337
