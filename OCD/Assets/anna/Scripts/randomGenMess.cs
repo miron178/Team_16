@@ -8,9 +8,15 @@ public class randomGenMess : MonoBehaviour
     public Vector3 size;
     public Vector3 center2;
     public Vector3 size2;
+    public Vector3 center3;
+    public Vector3 size3;
 
     public GameObject dirtPrefab;
-  
+    public GameObject platePrefab;
+    public GameObject toyPrefab;
+    public GameObject toy2Prefab;
+    public GameObject toy3Prefab;
+
     void Start()
     {
         if (gameObject.tag == "kitchen")
@@ -18,15 +24,23 @@ public class randomGenMess : MonoBehaviour
             for (int i = 0; i < 6; i++)
             {
                 spawnDirt();
+                spawnPlate();
             }
         }
         else if(gameObject.tag == "bedroom")
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 4; i++)
             {
                 spawnDirt();
             }
-            
+            for (int i = 0; i < 2; i++)
+            {
+                spawnToy();
+                spawnToy2();
+                spawnToy3();
+
+            }
+
         }
 
     }
@@ -40,12 +54,35 @@ public class randomGenMess : MonoBehaviour
         Instantiate(dirtPrefab, position2, Quaternion.identity);
         
     }
-   
+    public void spawnToy()
+    {
+        Vector3 position2 = center2 + new Vector3(Random.Range(-size2.x / 2, size2.x / 2), Random.Range(-size2.y / 2, size2.y / 2), Random.Range(-size2.z / 2, size2.z / 2));  
+        Instantiate(toyPrefab, position2, Quaternion.identity);              
+    }
+    public void spawnToy2()
+    {
+        Vector3 position2 = center2 + new Vector3(Random.Range(-size2.x / 2, size2.x / 2), Random.Range(-size2.y / 2, size2.y / 2), Random.Range(-size2.z / 2, size2.z / 2));
+        Instantiate(toy2Prefab, position2, Quaternion.identity);
+    }
+    public void spawnToy3()
+    {
+        Vector3 position2 = center2 + new Vector3(Random.Range(-size2.x / 2, size2.x / 2), Random.Range(-size2.y / 2, size2.y / 2), Random.Range(-size2.z / 2, size2.z / 2));
+        Instantiate(toy3Prefab, position2, Quaternion.identity);
+    }
+
+    public void spawnPlate()
+    {
+        Vector3 position = center3 + new Vector3(Random.Range(-size3.x / 2, size3.x / 2), Random.Range(-size3.y / 2, size3.y / 2), Random.Range(-size3.z / 2, size3.z / 2));
+        Instantiate(platePrefab, position, Quaternion.identity);     
+
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawCube(center, size);
         Gizmos.DrawCube(center2, size2);
+        Gizmos.DrawCube(center3, size3);
     }
 
 }

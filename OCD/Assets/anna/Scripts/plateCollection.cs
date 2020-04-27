@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class toyCollected : MonoBehaviour
+public class plateCollection : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "toy")
+        if (other.gameObject.tag == "plate")
         {
             other.gameObject.SetActive(false);
         }
-        
+
     }
 }
