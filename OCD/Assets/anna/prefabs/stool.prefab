@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 830524498244640635}
   - component: {fileID: 8072090004995715181}
   - component: {fileID: 4689585874793219231}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7812734768100525660
 Transform:
@@ -102,13 +102,13 @@ GameObject:
   - component: {fileID: 6757280887908649120}
   - component: {fileID: 6238570452989111028}
   - component: {fileID: 7277442838419369539}
-  - component: {fileID: 8160459067500952784}
-  m_Layer: 0
+  - component: {fileID: 3644807508396086967}
+  m_Layer: 9
   m_Name: stool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6757280887908649120
 Transform:
@@ -170,8 +170,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &8160459067500952784
-SphereCollider:
+--- !u!65 &3644807508396086967
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -181,5 +181,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Center: {x: 0, y: 0, z: -0.00000023841858}
