@@ -9,9 +9,11 @@ public class PickUpObjects : MonoBehaviour
 	private GameObject objectInRange = null;
 	private GameObject holding = null;
 	private int pickUpLayer;
+	private int wallLayer;
 
 	void Start() {
 		pickUpLayer = LayerMask.NameToLayer("PickUp");
+		wallLayer = LayerMask.NameToLayer("Wall");
 	}
 
 	// Update is called once per frame
@@ -24,8 +26,9 @@ public class PickUpObjects : MonoBehaviour
 			objectInRange = null;
 		}
 
-		//drop
-		if (Input.GetKey(KeyCode.R) && holding) {
+		//drop		
+		bool canDrop = !Physics.Linecast(transform.position, des.transform.position, 1 << wallLayer);
+		if (Input.GetKey(KeyCode.R) && holding && canDrop) {
 			Drop(holding);
 			objectInRange = holding;
 			holding = null;
@@ -37,6 +40,7 @@ public class PickUpObjects : MonoBehaviour
 		gameObject.transform.position = des.position;
 		gameObject.transform.parent = des;
 	}
+
 	private void Drop(GameObject gameObject) {
 		gameObject.GetComponent<Rigidbody>().isKinematic = false;
 		//gameObject.transform.position = unchanged
@@ -48,6 +52,7 @@ public class PickUpObjects : MonoBehaviour
 			objectInRange = other.gameObject;
 		}
 	}
+
 	private void OnTriggerExit(Collider other) {
 
 		if (other.gameObject == objectInRange) {
