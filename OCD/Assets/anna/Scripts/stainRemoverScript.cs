@@ -6,7 +6,7 @@ public class stainRemoverScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "wipe")
+         if (other.gameObject.tag == "stainRemover")
         {
             gameObject.SetActive(false);
         }
