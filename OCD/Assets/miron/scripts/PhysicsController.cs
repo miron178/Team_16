@@ -36,8 +36,6 @@ public class PhysicsController : MonoBehaviour {
 		if (grounded) {
 			rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
 		}
-
-		float pickUp = Input.GetAxis(prefix + "PickUp");
 	}
 
 	void LateUpdate() {
