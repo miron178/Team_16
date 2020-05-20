@@ -7,7 +7,7 @@ public class PhysicsController : MonoBehaviour {
 	private float acceleration = 100000f;
 	private Rigidbody rb;
 	[SerializeField]
-	private string prefix = "P1";
+	private string prefix = "P2";
 	[SerializeField]
 	private float maxSpeed = 1f;
 	[SerializeField]
@@ -36,6 +36,8 @@ public class PhysicsController : MonoBehaviour {
 		if (grounded) {
 			rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
 		}
+
+		float pickUp = Input.GetAxis(prefix + "PickUp");
 	}
 
 	void LateUpdate() {

@@ -11,6 +11,9 @@ public class PickUpObjects : MonoBehaviour
 	private int pickUpLayer;
 	private int wallLayer;
 
+	[SerializeField]
+	private string prefix = "P2";
+
 	void Start() {
 		pickUpLayer = LayerMask.NameToLayer("PickUp");
 		wallLayer = LayerMask.NameToLayer("Wall");
@@ -19,16 +22,18 @@ public class PickUpObjects : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
+		float interact = Input.GetAxis(prefix + "Interact");
+
 		//pick up
-		if (Input.GetKey(KeyCode.E) && !holding && objectInRange) {
+		if (interact > 0 && !holding && objectInRange) {
 			PickUp(objectInRange);
 			holding = objectInRange;
 			objectInRange = null;
 		}
 
-		//drop		
+		//drop
 		bool canDrop = !Physics.Linecast(transform.position, des.transform.position, 1 << wallLayer);
-		if (Input.GetKey(KeyCode.R) && holding && canDrop) {
+		if (interact < 0 && holding && canDrop) {
 			Drop(holding);
 			objectInRange = holding;
 			holding = null;
