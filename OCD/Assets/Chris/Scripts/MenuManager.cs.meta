@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 214817239d49cd14cbf66edd9151c752
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MENU_home: {instanceID: 0}
+  - MENU_play: {instanceID: 0}
+  - MENU_gameSettings: {instanceID: 0}
+  - MENU_settings: {instanceID: 0}
+  - MENU_inGame: {instanceID: 0}
+  - MENU_pause: {instanceID: 0}
+  - MENU_yesNo: {instanceID: 0}
+  - MENU_customiseProfile: {instanceID: 0}
+  - playerOneNameDropdown: {instanceID: 0}
+  - selectedPlayerOneName: {instanceID: 0}
+  - playerTwoNameDropdown: {instanceID: 0}
+  - selectedPlayerTwoName: {instanceID: 0}
+  - playerThreeNameDropdown: {instanceID: 0}
+  - selectedPlayerThreeName: {instanceID: 0}
+  - playerFourNameDropdown: {instanceID: 0}
+  - selectedPlayerFourName: {instanceID: 0}
+  - IG_playerOneNameDisplay: {instanceID: 0}
+  - IG_playerTwoNameDisplay: {instanceID: 0}
+  - IG_playerThreeNameDisplay: {instanceID: 0}
+  - IG_playerFourNameDisplay: {instanceID: 0}
+  - myFont: {fileID: 12800000, guid: ce00f2eb174844a4f9579dd4f8814889, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
