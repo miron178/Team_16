@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
+    ScoreManager ScoreReferance;
+
+
     [SerializeField]
     Font myFont;
 
@@ -16,6 +19,12 @@ public class MenuManager : MonoBehaviour
     //need to start using this
     //Dropdown[] PlayerDropdowns = new Dropdown[4] { 1, 2, 3, 4 };
 
+    #region Levels
+    [SerializeField]
+    GameObject LevelOne;
+    [SerializeField]
+    GameObject LevelTwo;
+    #endregion
 
     #region UI Pages
     [Header("Menus")]
@@ -97,6 +106,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     Slider SL_AudioMusic;
     float AudioMultiplier;
+    [SerializeField]
+    Camera MenuCamera;
     #endregion
 
     #region Game Settings
@@ -119,6 +130,8 @@ public class MenuManager : MonoBehaviour
     [Header("SFX")]
     [SerializeField]
     AudioSource[] SFX_Ingame; //need to load sounds into array
+
+    int SelectedLevel = 1;
     #endregion
 
     #region Gets Elements For UI
@@ -143,6 +156,8 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //assigns the scorereferance to the scoremanager script
+        ScoreReferance = GetComponent<ScoreManager>();
         //sets all menus to visable so that code below can find elements
         MENU_home.SetActive(true);
         MENU_play.SetActive(true);
@@ -293,11 +308,31 @@ public class MenuManager : MonoBehaviour
         NumberOfPlayersUpdate();
 
         MENU_play.SetActive(false);
+        MenuCamera.enabled = false;
+        MenuCamera.GetComponent<AudioListener>().enabled = false;
+        inGame = true;
+        if (SelectedLevel == 1)
+        {
+            LevelOne.SetActive(true);
+        }
+        if (SelectedLevel == 2)
+        {
+            LevelTwo.SetActive(true);
+        }
+        else LevelOne.SetActive(true);
         MENU_inGame.GetComponent<CanvasGroup>().alpha = 1;
         MENU_inGame.SetActive(true);
-        inGame = true;
-        //need to load amount of players selected
-
+    }
+    public void PM_LevelToggle()
+    {
+        if (SelectedLevel == 1)
+        {
+            SelectedLevel = 2;
+        }
+        else
+        {
+            SelectedLevel = 1;
+        }
     }
     public void PM_GameSettings()
     {
@@ -396,6 +431,10 @@ public class MenuManager : MonoBehaviour
         MENU_yesNo.SetActive(false);
         MENU_inGame.SetActive(false);
         MENU_home.SetActive(true);
+        MenuCamera.enabled = true;
+        MenuCamera.GetComponent<AudioListener>().enabled = true;
+        LevelOne.SetActive(false);
+        LevelTwo.SetActive(false);
     }
     public void Yn_No()
     {
@@ -512,6 +551,10 @@ public class MenuManager : MonoBehaviour
     {
         MENU_home.SetActive(true);
         MENU_victory.SetActive(false);
+        MenuCamera.enabled = true;
+        MenuCamera.GetComponent<AudioListener>().enabled = true;
+        LevelOne.SetActive(false);
+        LevelTwo.SetActive(false);
     }
     public void UpdateScores()
     {
@@ -539,7 +582,6 @@ public class MenuManager : MonoBehaviour
         MENU_leaderboard.SetActive(false);
         MENU_home.SetActive(true);
     }
-
     #endregion
 
 

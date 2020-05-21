@@ -22,4 +22,10 @@ public class UIScript : MonoBehaviour
             //mum comes home
         }
     }
+
+    //Added By Chris
+    void resetTimer()
+    {
+        timeLeft = 216.0f;
+    }
 }
