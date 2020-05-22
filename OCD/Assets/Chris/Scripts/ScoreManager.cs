@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+
     MenuManager MenuReferance;
     Text[] PlayerScores = new Text[5];
+    [Header("Player In Game Scores")]
     [SerializeField]
     Text TXT_IG_PlayerOneScore;
     [SerializeField]

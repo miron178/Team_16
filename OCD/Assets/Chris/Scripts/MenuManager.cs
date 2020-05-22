@@ -20,6 +20,7 @@ public class MenuManager : MonoBehaviour
     //Dropdown[] PlayerDropdowns = new Dropdown[4] { 1, 2, 3, 4 };
 
     #region Levels
+    [Header("Levels")]
     [SerializeField]
     GameObject LevelOne;
     [SerializeField]
@@ -448,7 +449,7 @@ public class MenuManager : MonoBehaviour
     {
         //load names from txt document into a string
         //split the string at , into array
-        string Str_playNameFile = File.ReadAllText("Assets/PlayerNames/PlayerNames.txt");
+        string Str_playNameFile = File.ReadAllText("Assets/Chris/PlayerNames/PlayerNames.txt");
         string[] Str_playerNames = Str_playNameFile.Split(',');
 
         bool found = false;
@@ -467,7 +468,7 @@ public class MenuManager : MonoBehaviour
         //adding a , at the end
         if (found == false)
         {
-            File.WriteAllText("Assets/PlayerNames/PlayerNames.txt", Str_playNameFile + TXT_inputName.text + ",");
+            File.WriteAllText("Assets/Chris/PlayerNames/PlayerNames.txt", Str_playNameFile + TXT_inputName.text + ",");
             TXT_inputTitle.text = "Name : " + TXT_inputName.text + " has been added";
         }
         //if name is found
@@ -487,7 +488,7 @@ public class MenuManager : MonoBehaviour
     public void EN_Remove()
     {
         //get values from txt doc and save in array
-        string Str_playNameFile = File.ReadAllText("Assets/PlayerNames/PlayerNames.txt");
+        string Str_playNameFile = File.ReadAllText("Assets/Chris/PlayerNames/PlayerNames.txt");
         string[] Str_playerNames = Str_playNameFile.Split(',');
 
         //load arr with txt doc values
@@ -513,7 +514,7 @@ public class MenuManager : MonoBehaviour
                 arr.CopyTo(newFileNames);
 
                 string newFile = string.Join(",", newFileNames);
-                File.WriteAllText("Assets/PlayerNames/PlayerNames.txt", newFile);
+                File.WriteAllText("Assets/Chris/PlayerNames/PlayerNames.txt", newFile);
 
                 TXT_inputTitle.text = TXT_inputName.text + " has been removed";
                 successful = true;
@@ -590,7 +591,7 @@ public class MenuManager : MonoBehaviour
     public void LoadNames(Dropdown Dd_PlayerName)
     {
         // load the names needed for the dropdown into an array splitting at ,
-        string Str_playNameFile = File.ReadAllText("Assets/PlayerNames/PlayerNames.txt");
+        string Str_playNameFile = File.ReadAllText("Assets/Chris/PlayerNames/PlayerNames.txt");
         string[] Str_playerNames = Str_playNameFile.Split(',');
         
         Dd_PlayerName.options.Clear();
@@ -690,5 +691,6 @@ public class MenuManager : MonoBehaviour
             GO_PM_PlayerFour.SetActive(true);
         }
     }
+
 
 }

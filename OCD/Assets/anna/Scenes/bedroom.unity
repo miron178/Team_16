@@ -17558,6 +17558,7 @@ GameObject:
   - component: {fileID: 1349718374}
   - component: {fileID: 1349718373}
   - component: {fileID: 1349718375}
+  - component: {fileID: 1349718376}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -17650,6 +17651,19 @@ MonoBehaviour:
   TXT_IG_PlayerTwoScore: {fileID: 1787623521}
   TXT_IG_PlayerThreeScore: {fileID: 1504058382}
   TXT_IG_PlayerFourScore: {fileID: 1929836733}
+--- !u!114 &1349718376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349718372}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8881073a09ea141b957bf1e2aab0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startText: {fileID: 1826423003}
 --- !u!1 &1350820617
 GameObject:
   m_ObjectHideFlags: 0
@@ -25183,7 +25197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1935675356
 Transform:
   m_ObjectHideFlags: 0
