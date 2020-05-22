@@ -91,6 +91,8 @@ public class MenuManager : MonoBehaviour
     Text TXT_IG_playerThreeNameDisplay;
     [SerializeField]
     Text TXT_IG_playerFourNameDisplay;
+    public Text[] TXT_IG_PlayerNamesArray = new Text[5];
+
     [SerializeField]
     Text TXT_IG_timer;
     int timeLeft;
@@ -269,6 +271,7 @@ public class MenuManager : MonoBehaviour
 
     #region Buttons / Pages
 
+    //HomeMenu
     public void HM_Play()
     {
         MENU_home.SetActive(false);
@@ -323,6 +326,11 @@ public class MenuManager : MonoBehaviour
         else LevelOne.SetActive(true);
         MENU_inGame.GetComponent<CanvasGroup>().alpha = 1;
         MENU_inGame.SetActive(true);
+
+        TXT_IG_PlayerNamesArray[1] = TXT_IG_playerOneNameDisplay;
+        TXT_IG_PlayerNamesArray[2] = TXT_IG_playerTwoNameDisplay;
+        TXT_IG_PlayerNamesArray[3] = TXT_IG_playerThreeNameDisplay;
+        TXT_IG_PlayerNamesArray[4] = TXT_IG_playerFourNameDisplay;
     }
     public void PM_LevelToggle()
     {
@@ -548,6 +556,15 @@ public class MenuManager : MonoBehaviour
     }
 
     //Victory
+    public void V_Show()
+    {
+        MENU_victory.SetActive(true);
+        MENU_inGame.SetActive(false);
+        MenuCamera.enabled = true;
+        MenuCamera.GetComponent<AudioListener>().enabled = true;
+        LevelOne.SetActive(false);
+        LevelTwo.SetActive(false);
+    }
     public void V_Home()
     {
         MENU_home.SetActive(true);
@@ -692,5 +709,9 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    //write the scores to the txt doc
+    public void WriteScores()
+    {
 
+    }
 }
