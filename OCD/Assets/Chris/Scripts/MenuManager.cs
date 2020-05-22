@@ -709,9 +709,4 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    //write the scores to the txt doc
-    public void WriteScores()
-    {
-
-    }
 }

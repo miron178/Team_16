@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class ScoreManager : MonoBehaviour
 {
 
     MenuManager MenuReferance;
-
 
     [Header("Player In Game Scores")]
     [SerializeField]
@@ -22,6 +22,8 @@ public class ScoreManager : MonoBehaviour
     [Header("Victory Text")]
     [SerializeField]
     Text TXT_Victory;
+
+    string[] STR_Highscores = new string[50];
 
     void Start()
     {
@@ -94,17 +96,130 @@ public class ScoreManager : MonoBehaviour
             TXT_Victory.text = MenuReferance.TXT_IG_PlayerNamesArray[highScoringPlayer] + "Wins!!!";
         }
         MenuReferance.V_Show();
-        MenuReferance.WriteScores();
+        WriteScores();
     }
 
+    //write highscores
+    //very messy
+    //dont know if it works
+    //havent run it yet
+    //dont want to
+
+    // it might work
+    // it prob will work
+    // but it doesnt save the values with - and , seperating
+    // i would have to bodge together another 50 lines to get it working
+    // it wont be efficient neet or easy to understand or debug
+    // it will stay commented out for now
+
+
+    //public void WriteScores()
+    //{
+    //    string Str_HighScoreFile = File.ReadAllText("Assets/Chris/PlayerNames/HighScores.txt");
+    //    string[] Str_HighScores = Str_HighScoreFile.Split(',');
 
 
 
+    //    //loads player scores and names
+    //    string[] HighscoresParsed = Str_HighScores[1].Split('-');
+    //    bool alternate = false;
+    //    string[] playernames = new string[50];
+    //    string[] highscore = new string[50];
+    //    int IntTeller = 0;
+    //    foreach (string Str_Values in HighscoresParsed)
+    //    {
+    //        //saves names
+    //        if (alternate == false)
+    //        {
+    //            playernames[IntTeller] = Str_Values;
+    //        }
+    //        //saves score
+    //        if (alternate == true)
+    //        {
+    //            highscore[IntTeller] = Str_Values;
+                
+    //            IntTeller++;
+    //        }
+    //        alternate = !alternate;
+            
+    //    }
+
+    //    //checks if names dont exists to add them
+    //    IntTeller = 0;
+    //    int found = 0;
+    //    string[] valuetoadd= new string[5];
+    //    for (int p = 0; p < 4; p++)
+    //    {
+    //        foreach (string Str_Values in HighscoresParsed)
+    //        {
+    //            if (alternate == false)
+    //            {
+    //                if(playernames[IntTeller] == MenuReferance.TXT_IG_PlayerNamesArray[p].ToString())
+    //                {
+    //                    found++;
+    //                }
+    //            }
+
+    //            if (alternate == true)
+    //            {
+    //                IntTeller++;
+    //            }
+    //            alternate = !alternate; //so it only runs 1/2 the array length
+
+    //        }
+    //        if (found == 0)
+    //        {
+    //            valuetoadd[p] = playernames[IntTeller]; ;
+    //        }
+    //        else
+    //        {
+    //            found = 0;
+    //        }
+
+    //    }
+
+    //    //checks for player scores to update
+    //    IntTeller = 0;
+    //    alternate = false;
+    //    foreach (string Str_Values in HighscoresParsed)
+    //    {
+    //        if (alternate == false)
+    //        {
+    //            for (int o = 0; o < 4; o++)
+    //            {
+    //                //tests if players in game match name
+    //                if (playernames[IntTeller] == MenuReferance.TXT_IG_PlayerNamesArray[o].ToString())
+    //                {
+    //                    //tests if the score they recieved is better
+    //                    if (int.Parse(highscore[IntTeller]) > int.Parse(TXT_PlayerScoresArray[o].text))
+    //                    {
+    //                        //updates the score
+    //                        highscore[IntTeller] = TXT_PlayerScoresArray[o].ToString();
+    //                    }
+    //                }
+    //            }
+    //        }
+    //        if (alternate == true)
+    //        {
+    //            IntTeller++;
+    //        }
+    //        alternate = !alternate;//so it only runs 1/2 the array length
+    //    }
 
 
+    //    string NewWriteString = "";
+    //    foreach (string Str_Values in HighscoresParsed)
+    //    {
+    //        NewWriteString = NewWriteString + Str_Values;
+    //        //alternate adding - and ,
+    //    }
 
+    //    File.WriteAllText("Assets/Chris/PlayerNames/HighScores.txt", NewWriteString);
 
-
-
+    //    for (int g = 0; g < 4; g++)
+    //    {
+    //        File.WriteAllText("Assets/Chris/PlayerNames/HighScores.txt", NewWriteString + valuetoadd[g]);
+    //    }
+    //}
 
 }
