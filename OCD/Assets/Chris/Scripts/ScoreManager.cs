@@ -96,7 +96,7 @@ public class ScoreManager : MonoBehaviour
             TXT_Victory.text = MenuReferance.TXT_IG_PlayerNamesArray[highScoringPlayer] + "Wins!!!";
         }
         MenuReferance.V_Show();
-        WriteScores();
+        //WriteScores();
     }
 
     //write highscores
