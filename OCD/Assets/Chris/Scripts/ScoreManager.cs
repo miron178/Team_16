@@ -77,7 +77,7 @@ public class ScoreManager : MonoBehaviour
         int highScoringPlayer = 0; // the player with the highest score
         
         //run for each player
-        for (int i = 0; i < 4; i++)
+        for (int i = 1; i <= 4; i++)
         {
             //check all scores against current highest found
             if (int.Parse(TXT_PlayerScoresArray[i].text) > highScoreOfPlayer)
@@ -92,10 +92,15 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            //show the player who won
-            TXT_Victory.text = MenuReferance.TXT_IG_PlayerNamesArray[highScoringPlayer] + "Wins!!!";
+            //assign the winners name to a string
+            string victor = MenuReferance.TXT_IG_PlayerNamesArray[highScoringPlayer].text;
+            //remove the last 25 chars
+            victor = victor.Substring(0, MenuReferance.TXT_IG_PlayerNamesArray[highScoringPlayer].text.Length - 25);
+            //update the display
+            TXT_Victory.text = victor + "Wins!!!";
         }
         MenuReferance.V_Show();
+        ResetAllPlayers();
         //WriteScores();
     }
 

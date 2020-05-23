@@ -1675,7 +1675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &174561070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1763,12 +1763,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174561069}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb8881073a09ea141b957bf1e2aab0bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startText: {fileID: 1826423003}
+  timeLeft: 60
 --- !u!4 &191398293 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2628851630290792795, guid: c967bcec85d6dd2418271496391ae57e,
@@ -17666,12 +17667,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349718372}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb8881073a09ea141b957bf1e2aab0bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startText: {fileID: 1826423003}
+  startText: {fileID: 1722333576}
+  timeLeft: 210
 --- !u!1 &1350820617
 GameObject:
   m_ObjectHideFlags: 0
@@ -19612,6 +19614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startText: {fileID: 1816613575}
+  timeLeft: 210
 --- !u!114 &1467652062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22548,7 +22551,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 111
+  m_Text: 
 --- !u!222 &1722333577
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23714,7 +23717,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time: '
+  m_Text: 
 --- !u!222 &1826423004
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25388,7 +25391,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PlayerOne Vicotry!
+  m_Text: 
 --- !u!222 &1930664621
 CanvasRenderer:
   m_ObjectHideFlags: 0

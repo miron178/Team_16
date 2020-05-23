@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
     ScoreManager ScoreReferance;
-
+    UIScript TimerScriptReferance;
 
     [SerializeField]
     Font myFont;
@@ -161,6 +161,7 @@ public class MenuManager : MonoBehaviour
     {
         //assigns the scorereferance to the scoremanager script
         ScoreReferance = GetComponent<ScoreManager>();
+        TimerScriptReferance = GetComponent<UIScript>();
         //sets all menus to visable so that code below can find elements
         MENU_home.SetActive(true);
         MENU_play.SetActive(true);
@@ -253,15 +254,6 @@ public class MenuManager : MonoBehaviour
                 inGame = false;
                 MENU_inGame.GetComponent<CanvasGroup>().alpha = 0.5f;
             }
-            //get the time left
-            timeLeft = int.Parse(TXT_IG_timer.text.ToString());
-            //if timer hits 0 show victory screen
-            if (timeLeft <= 0)
-            {
-                inGame = false;
-                MENU_inGame.SetActive(false);
-                MENU_victory.SetActive(true);
-            }
         }
 
         
@@ -326,6 +318,7 @@ public class MenuManager : MonoBehaviour
         else LevelOne.SetActive(true);
         MENU_inGame.GetComponent<CanvasGroup>().alpha = 1;
         MENU_inGame.SetActive(true);
+        TimerScriptReferance.resetTimer();
 
         TXT_IG_PlayerNamesArray[1] = TXT_IG_playerOneNameDisplay;
         TXT_IG_PlayerNamesArray[2] = TXT_IG_playerTwoNameDisplay;
@@ -558,12 +551,13 @@ public class MenuManager : MonoBehaviour
     //Victory
     public void V_Show()
     {
+        inGame = false;
+        LevelOne.SetActive(false);
+        LevelTwo.SetActive(false);
         MENU_victory.SetActive(true);
         MENU_inGame.SetActive(false);
         MenuCamera.enabled = true;
         MenuCamera.GetComponent<AudioListener>().enabled = true;
-        LevelOne.SetActive(false);
-        LevelTwo.SetActive(false);
     }
     public void V_Home()
     {
