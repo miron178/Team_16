@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 7620886485845560681}
   - component: {fileID: 8124333275548261367}
   - component: {fileID: 3661994339885324869}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: toy2 (1)
   m_TagString: toy
   m_Icon: {fileID: 0}

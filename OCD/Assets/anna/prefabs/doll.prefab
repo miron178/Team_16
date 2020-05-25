@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 6555666558682561577}
   - component: {fileID: 3093984414433504985}
   - component: {fileID: 1796144699502462561}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: doll
   m_TagString: toy
   m_Icon: {fileID: 0}

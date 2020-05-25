@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 1010713177712478072}
   - component: {fileID: 2286662202484930378}
   - component: {fileID: 6116434196088524189}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stainRemover
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -16,6 +16,7 @@ TagManager:
   - extinguisher
   - ash
   - plate
+  - broom
   layers:
   - Default
   - TransparentFX

@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 939416567422761400}
   - component: {fileID: 1335972062814730680}
   - component: {fileID: 1150230704636988548}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: football (1)
   m_TagString: toy
   m_Icon: {fileID: 0}

@@ -104,10 +104,9 @@ GameObject:
   - component: {fileID: 2628851630290792797}
   - component: {fileID: 2628851630290792796}
   - component: {fileID: 2628851630290792799}
-  - component: {fileID: 4911782339593997886}
-  m_Layer: 0
-  m_Name: mop
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: broom
+  m_TagString: broom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,19 +197,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &4911782339593997886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2628851630290792798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8a061399dbbdf4479b74991a7ee79cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

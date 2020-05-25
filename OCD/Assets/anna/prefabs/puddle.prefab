@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 94617385674306247}
   - component: {fileID: 2561671926345280836}
   - component: {fileID: 8108438024236603121}
+  - component: {fileID: 8563348078493995879}
   m_Layer: 0
   m_Name: puddle
   m_TagString: Untagged
@@ -275,3 +276,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8563348078493995879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212607172430184965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a061399dbbdf4479b74991a7ee79cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
