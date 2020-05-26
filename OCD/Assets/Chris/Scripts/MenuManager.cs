@@ -15,16 +15,14 @@ public class MenuManager : MonoBehaviour
 
     string previousPage = null; // maybe change
     public bool inGame = false; //maybe change
-
-    //need to start using this
-    //Dropdown[] PlayerDropdowns = new Dropdown[4] { 1, 2, 3, 4 };
+    
 
     #region Levels
     [Header("Levels")]
     [SerializeField]
-    GameObject LevelOne;
+    GameObject GO_LevelOne;
     [SerializeField]
-    GameObject LevelTwo;
+    GameObject GO_LevelTwo;
     #endregion
 
     #region UI Pages
@@ -108,9 +106,11 @@ public class MenuManager : MonoBehaviour
     Slider SL_AudioEffects;
     [SerializeField]
     Slider SL_AudioMusic;
-    float AudioMultiplier;
+    float Fl_AudioMultiplier;
     [SerializeField]
-    Camera MenuCamera;
+    Camera Cam_MenuCamera;
+    [SerializeField]
+    Text Txt_LevelToggle;
     #endregion
 
     #region Game Settings
@@ -134,7 +134,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     AudioSource[] SFX_Ingame; //need to load sounds into array
 
-    int SelectedLevel = 1;
+    int Int_SelectedLevel = 1;
     #endregion
 
     #region Gets Elements For UI
@@ -144,6 +144,7 @@ public class MenuManager : MonoBehaviour
     private Slider[] GetSliders;
     #endregion
 
+    //need to do something with
     #region LeaderBoards
     [Header("Leaderboard")]
     [SerializeField]
@@ -154,9 +155,13 @@ public class MenuManager : MonoBehaviour
     Text Third;
     #endregion
 
-    
+    void Awake()
+    {
+        //hide the levels before they can run anything
+        GO_LevelOne.SetActive(false);
+        GO_LevelTwo.SetActive(false);
+    }
 
-    // Start is called before the first frame update
     void Start()
     {
         //assigns the scorereferance to the scoremanager script
@@ -237,7 +242,7 @@ public class MenuManager : MonoBehaviour
         MENU_controls.SetActive(false);
         MENU_leaderboard.SetActive(false);
         MENU_victory.SetActive(false);
-
+        //update scene audio
         AudioMasterUpdate();
     }
 
@@ -302,38 +307,51 @@ public class MenuManager : MonoBehaviour
         TXT_IG_playerThreeNameDisplay.text = DD_playerThreeName.options[DD_playerThreeName.value].text;
         TXT_IG_playerFourNameDisplay.text = DD_playerFourName.options[DD_playerFourName.value].text;
         NumberOfPlayersUpdate();
-
+        //hide menu
         MENU_play.SetActive(false);
-        MenuCamera.enabled = false;
-        MenuCamera.GetComponent<AudioListener>().enabled = false;
+        Cam_MenuCamera.enabled = false;
+        Cam_MenuCamera.GetComponent<AudioListener>().enabled = false;
         inGame = true;
-        if (SelectedLevel == 1)
+        //change level depending on selection
+        if (Int_SelectedLevel == 1)
         {
-            LevelOne.SetActive(true);
+            GO_LevelOne.SetActive(true);
         }
-        if (SelectedLevel == 2)
+        if (Int_SelectedLevel == 2)
         {
-            LevelTwo.SetActive(true);
+            GO_LevelTwo.SetActive(true);
         }
-        else LevelOne.SetActive(true);
+        else GO_LevelOne.SetActive(true);
+        //set transparency of ui
         MENU_inGame.GetComponent<CanvasGroup>().alpha = 1;
+        //show ui
         MENU_inGame.SetActive(true);
+        //start the timer
         TimerScriptReferance.resetTimer();
 
+        //load names into array
         TXT_IG_PlayerNamesArray[1] = TXT_IG_playerOneNameDisplay;
         TXT_IG_PlayerNamesArray[2] = TXT_IG_playerTwoNameDisplay;
         TXT_IG_PlayerNamesArray[3] = TXT_IG_playerThreeNameDisplay;
         TXT_IG_PlayerNamesArray[4] = TXT_IG_playerFourNameDisplay;
+
+        //get the lights in the loaded level and update brightness vaules
+        Lights_Ingame = Light.FindObjectsOfType<Light>();
+        BrightnessUpdate();
+
     }
     public void PM_LevelToggle()
     {
-        if (SelectedLevel == 1)
+        //switch between levels
+        if (Int_SelectedLevel == 1)
         {
-            SelectedLevel = 2;
+            Int_SelectedLevel = 2;
+            Txt_LevelToggle.text = "DownStairs";
         }
         else
         {
-            SelectedLevel = 1;
+            Int_SelectedLevel = 1;
+            Txt_LevelToggle.text = "Bedroom";
         }
     }
     public void PM_GameSettings()
@@ -433,10 +451,10 @@ public class MenuManager : MonoBehaviour
         MENU_yesNo.SetActive(false);
         MENU_inGame.SetActive(false);
         MENU_home.SetActive(true);
-        MenuCamera.enabled = true;
-        MenuCamera.GetComponent<AudioListener>().enabled = true;
-        LevelOne.SetActive(false);
-        LevelTwo.SetActive(false);
+        Cam_MenuCamera.enabled = true;
+        Cam_MenuCamera.GetComponent<AudioListener>().enabled = true;
+        GO_LevelOne.SetActive(false);
+        GO_LevelTwo.SetActive(false);
     }
     public void Yn_No()
     {
@@ -552,21 +570,21 @@ public class MenuManager : MonoBehaviour
     public void V_Show()
     {
         inGame = false;
-        LevelOne.SetActive(false);
-        LevelTwo.SetActive(false);
+        GO_LevelOne.SetActive(false);
+        GO_LevelTwo.SetActive(false);
         MENU_victory.SetActive(true);
         MENU_inGame.SetActive(false);
-        MenuCamera.enabled = true;
-        MenuCamera.GetComponent<AudioListener>().enabled = true;
+        Cam_MenuCamera.enabled = true;
+        Cam_MenuCamera.GetComponent<AudioListener>().enabled = true;
     }
     public void V_Home()
     {
         MENU_home.SetActive(true);
         MENU_victory.SetActive(false);
-        MenuCamera.enabled = true;
-        MenuCamera.GetComponent<AudioListener>().enabled = true;
-        LevelOne.SetActive(false);
-        LevelTwo.SetActive(false);
+        Cam_MenuCamera.enabled = true;
+        Cam_MenuCamera.GetComponent<AudioListener>().enabled = true;
+        GO_LevelOne.SetActive(false);
+        GO_LevelTwo.SetActive(false);
     }
     public void UpdateScores()
     {
@@ -655,8 +673,8 @@ public class MenuManager : MonoBehaviour
     public void AudioMasterUpdate()
     {
         //set the audio master multiplier
-        AudioMultiplier = SL_AudioMaster.value;
-        AudioMultiplier = AudioMultiplier / 2;
+        Fl_AudioMultiplier = SL_AudioMaster.value;
+        Fl_AudioMultiplier = Fl_AudioMultiplier / 2;
         //update the audio sliders with the new multiplier
         AudioSFXUpdate();
         AudioMusicUpdate();
@@ -666,12 +684,12 @@ public class MenuManager : MonoBehaviour
         //adjust the audio volume for all sfx in the scene
         foreach (AudioSource audio in SFX_Ingame)
         {
-             audio.volume = SL_AudioEffects.value * AudioMultiplier;
+             audio.volume = SL_AudioEffects.value * Fl_AudioMultiplier;
         }
     }
     public void AudioMusicUpdate()
     {
-        AS_CameraMusic.volume = SL_AudioMusic.value * AudioMultiplier;
+        AS_CameraMusic.volume = SL_AudioMusic.value * Fl_AudioMultiplier;
         //IngameMusic.volume = SL_AudioMusic.value * AudioMultiplier;
     }
 
