@@ -23,7 +23,9 @@ public class MenuManager : MonoBehaviour
     GameObject GO_LevelOne;
     [SerializeField]
     GameObject GO_LevelTwo;
+    #endregion
 
+    #region Players
     [SerializeField]
     GameObject PlayerThreeLevelOne;
     [SerializeField]
