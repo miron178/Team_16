@@ -1378,6 +1378,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149593676}
   m_CullTransparentMesh: 0
+--- !u!1 &151882657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3716486819649891620, guid: a2a28846b59cc1c498e2b2b23c7e3347,
+    type: 3}
+  m_PrefabInstance: {fileID: 1318177090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &158382027
 GameObject:
   m_ObjectHideFlags: 0
@@ -12383,6 +12389,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934360945}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &937219341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3716486819649891620, guid: a2a28846b59cc1c498e2b2b23c7e3347,
+    type: 3}
+  m_PrefabInstance: {fileID: 931094612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &956712888
 GameObject:
   m_ObjectHideFlags: 0
@@ -18505,6 +18517,10 @@ MonoBehaviour:
   inGame: 0
   GO_LevelOne: {fileID: 529761641}
   GO_LevelTwo: {fileID: 640330555}
+  PlayerThreeLevelOne: {fileID: 320451432}
+  PlayerFourLevelOne: {fileID: 1566202804}
+  PlayerThreeLevelTwo: {fileID: 151882657}
+  PlayerFourLevelTwo: {fileID: 937219341}
   MENU_home: {fileID: 1835125043}
   MENU_play: {fileID: 641296630}
   MENU_gameSettings: {fileID: 2134011263}
