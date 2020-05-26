@@ -23,6 +23,17 @@ public class MenuManager : MonoBehaviour
     GameObject GO_LevelOne;
     [SerializeField]
     GameObject GO_LevelTwo;
+
+    [SerializeField]
+    GameObject PlayerThreeLevelOne;
+    [SerializeField]
+    GameObject PlayerFourLevelOne;
+
+    [SerializeField]
+    GameObject PlayerThreeLevelTwo;
+    [SerializeField]
+    GameObject PlayerFourLevelTwo;
+
     #endregion
 
     #region UI Pages
@@ -705,6 +716,13 @@ public class MenuManager : MonoBehaviour
             TXT_IG_playerThreeNameDisplay.gameObject.SetActive(false);
             GO_PM_PlayerFour.SetActive(false);
             TXT_IG_playerFourNameDisplay.gameObject.SetActive(false);
+
+            PlayerThreeLevelOne.SetActive(false);
+            PlayerThreeLevelTwo.SetActive(false);
+
+            PlayerFourLevelOne.SetActive(false);
+            PlayerFourLevelTwo.SetActive(false);
+
         }
 
         if (SL_NumberOfPlayers.value == 3)
@@ -712,12 +730,22 @@ public class MenuManager : MonoBehaviour
             GO_PM_PlayerThree.SetActive(true);
             GO_PM_PlayerFour.SetActive(false);
             TXT_IG_playerFourNameDisplay.gameObject.SetActive(false);
+
+            PlayerThreeLevelOne.SetActive(true);
+            PlayerThreeLevelTwo.SetActive(true);
+
+            PlayerFourLevelOne.SetActive(false);
+            PlayerFourLevelTwo.SetActive(false);
+
         }
 
         if (SL_NumberOfPlayers.value == 4)
         {
             GO_PM_PlayerThree.SetActive(true);
             GO_PM_PlayerFour.SetActive(true);
+
+            PlayerFourLevelOne.SetActive(true);
+            PlayerFourLevelTwo.SetActive(true);
         }
     }
 

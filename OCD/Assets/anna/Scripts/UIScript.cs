@@ -37,7 +37,7 @@ public class UIScript : MonoBehaviour
         minutes = Mathf.Floor(timeLeft / 60);
         seconds = timeLeft % 60;
         startText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
-        //startText.text = "Time: " + (timeLeft / 100).ToString("0.00"); 
+        //startText.text = "Time: " + (timeLeft / 100).ToString("0.00"); was 60 not 100
 
         if (timeLeft <= 0)
         {
