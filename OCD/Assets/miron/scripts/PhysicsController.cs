@@ -36,14 +36,18 @@ public class PhysicsController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-#if true //player controles
-			float horizontal = acceleration * Input.GetAxis(prefix + "Horizontal"); //movment
-			float vertical = acceleration * Input.GetAxis(prefix + "Vertical"); //movment
-			float jump = jumpForce * Input.GetAxis(prefix + "Jump"); //jump
-			float interact = Input.GetAxis(prefix + "Interact"); //pickUp and drop
+		float horizontal = acceleration * Input.GetAxis(prefix + "Horizontal"); //movment
+		float vertical = acceleration * Input.GetAxis(prefix + "Vertical"); //movment
+
+		float jump = jumpForce * Input.GetAxis(prefix + "Jump"); //jump
+		float interact = Input.GetAxis(prefix + "Interact"); //pickUp and drop
 
 		Vector3 force = new Vector3(horizontal, 0, vertical);
-		rb.AddRelativeForce(force * Time.fixedDeltaTime);
+
+		if (force.magnitude > 0) {
+			transform.LookAt(force);
+			rb.AddRelativeForce(Vector3.forward * force.magnitude * Time.fixedDeltaTime);
+		}
 
 		//Jump
 		bool grounded = Physics.Linecast(transform.position, jumpCheck.transform.position, 1 << groundLayer); //checks if player is grounded
@@ -64,7 +68,6 @@ public class PhysicsController : MonoBehaviour {
 			Drop(holding);
 			objectInRange = holding;
 			holding = null;
-#endif
 		}
 	}
 
