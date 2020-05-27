@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5268073998201377762}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: destination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 100000
-  prefix: P2
+  prefix: P3
   maxSpeed: 10
   jumpForce: 2000000
   jumpCheck: {fileID: 7406928243271669397}
