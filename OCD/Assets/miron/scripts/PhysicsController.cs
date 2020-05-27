@@ -24,6 +24,7 @@ public class PhysicsController : MonoBehaviour {
 	private GameObject holding = null;
 	private int pickUpLayer;
 	private int wallLayer;
+	private FixedJoint joint = null;
 
 	void Start() {
 		rb = GetComponent<Rigidbody>(); //used later to make code more readable
@@ -63,8 +64,7 @@ public class PhysicsController : MonoBehaviour {
 		}
 
 		//drop
-		bool canDrop = !Physics.Linecast(transform.position, des.transform.position, 1 << wallLayer); //stops dropping through walls
-		if (interact < 0 && holding && canDrop) {
+		if (interact < 0 && holding) {
 			Drop(holding);
 			objectInRange = holding;
 			holding = null;
@@ -78,14 +78,24 @@ public class PhysicsController : MonoBehaviour {
 	}
 
 	private void PickUp(GameObject gameObject) {
+#if false
 		gameObject.GetComponent<Rigidbody>().isKinematic = true; //makes picked up objects kinimatic to stop physics
 		gameObject.transform.position = des.position; //moves object to des(destination)
 		gameObject.transform.parent = des; //makes object chiled when being picked up
+#else
+		joint = this.gameObject.AddComponent<FixedJoint>();
+		joint.connectedBody = gameObject.GetComponent<Rigidbody>();
+#endif
 	}
 
 	private void Drop(GameObject gameObject) {
+#if false
 		gameObject.GetComponent<Rigidbody>().isKinematic = false; //makes object not kinematic
 		gameObject.transform.parent = null; //object is no longer has parant
+#else
+		Destroy(joint);
+		joint = null;
+#endif
 	}
 
 	private void OnTriggerEnter(Collider other) {
