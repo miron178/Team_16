@@ -13,8 +13,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     Font myFont;
 
-    string previousPage = null; // maybe change
-    public bool inGame = false; //maybe change
+    string previousPage = null;
+    public bool inGame = false;
     
 
     #region Levels
@@ -157,7 +157,7 @@ public class MenuManager : MonoBehaviour
     private Slider[] GetSliders;
     #endregion
 
-    //need to do something with
+    //Not in use
     #region LeaderBoards
     [Header("Leaderboard")]
     [SerializeField]

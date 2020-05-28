@@ -86,9 +86,11 @@ public class ScoreManager : MonoBehaviour
                 highScoringPlayer = i; //saves the player number with the highest score
             }
         }
-        if (highScoreOfPlayer == 0)//if all players have 0 highscoreofplayer wont be changed
+        //if highscore is the same as everyone draw
+        if (highScoreOfPlayer == int.Parse(TXT_PlayerScoresArray[1].text) && highScoreOfPlayer == int.Parse(TXT_PlayerScoresArray[2].text) 
+            && highScoreOfPlayer == int.Parse(TXT_PlayerScoresArray[3].text) && highScoreOfPlayer == int.Parse(TXT_PlayerScoresArray[4].text))
         {
-            TXT_Victory.text = "Draw!";
+            TXT_Victory.text = "Draw! you all had :" + highScoreOfPlayer + " Points!";
         }
         else
         {
@@ -97,7 +99,7 @@ public class ScoreManager : MonoBehaviour
             //remove the last 25 chars
             victor = victor.Substring(0, MenuReferance.TXT_IG_PlayerNamesArray[highScoringPlayer].text.Length - 25);
             //update the display
-            TXT_Victory.text = victor + "Wins!!!";
+            TXT_Victory.text = victor + "Wins!!!   With :" + highScoreOfPlayer +" Points!";
         }
         MenuReferance.V_Show();
         ResetAllPlayers();
