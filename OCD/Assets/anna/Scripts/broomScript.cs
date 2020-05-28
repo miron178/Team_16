@@ -5,14 +5,14 @@ using UnityEngine;
 public class broomScript : MonoBehaviour
 {
     public ScoreManager score;
-    public GameObject puddle;
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "puddle")
         {
-            puddle.SetActive(false);
+            other.gameObject.SetActive(false);
 
-            PickUp pickUp = other.gameObject.GetComponent<PickUp>();
+            PickUp pickUp = this.GetComponent<PickUp>();
             if (pickUp.playerPrefix == "P1")
             {
                 score.IncreaseScore(1, 10);

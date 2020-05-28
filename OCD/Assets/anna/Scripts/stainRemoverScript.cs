@@ -5,14 +5,14 @@ using UnityEngine;
 public class stainRemoverScript : MonoBehaviour
 {
     public ScoreManager score;
-    public GameObject dirt;
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "dirt")
         {
-            dirt.SetActive(false);
+            other.gameObject.SetActive(false);
 
-            PickUp pickUp = other.gameObject.GetComponent<PickUp>();
+            PickUp pickUp = this.GetComponent<PickUp>();
             if (pickUp.playerPrefix == "P1")
             {
                 score.IncreaseScore(1, 10);

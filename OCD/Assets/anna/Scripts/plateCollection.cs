@@ -10,7 +10,7 @@ public class plateCollection : MonoBehaviour
         if (other.gameObject.tag == "plate")
         {
            
-            PickUp pickUp = other.gameObject.GetComponent<PickUp>();
+            PickUp pickUp = this.GetComponent<PickUp>();
             if (pickUp.playerPrefix == "P1")
             {
                 score.IncreaseScore(1, 10);
