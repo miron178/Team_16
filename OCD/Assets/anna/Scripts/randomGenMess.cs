@@ -24,9 +24,9 @@ public class randomGenMess : MonoBehaviour
     Slider AmountOfMess;
 
 
+
     private void Start()
     {
-
         if (gameObject.tag == "kitchen")
         {
             for (int i = 0; i < Mathf.Round(AmountOfMess.value / 2); i++)

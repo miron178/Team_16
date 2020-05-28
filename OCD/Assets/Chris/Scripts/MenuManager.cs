@@ -132,8 +132,7 @@ public class MenuManager : MonoBehaviour
     Slider SL_amountOfMess;
     [SerializeField]
     Slider SL_DangerFrequency;
-    [SerializeField]
-    Slider SL_NumberOfPlayers;
+    public Slider SL_NumberOfPlayers;
     [SerializeField] // need to load lights into array
     Light[] Lights_Ingame;
 
