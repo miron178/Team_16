@@ -17,6 +17,8 @@ TagManager:
   - ash
   - plate
   - broom
+  - dirt
+  - puddle
   layers:
   - Default
   - TransparentFX

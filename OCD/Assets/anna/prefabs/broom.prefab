@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2628851630290792796}
   - component: {fileID: 2628851630290792799}
   - component: {fileID: -2359385308714145041}
+  - component: {fileID: -5006312207373746458}
   m_Layer: 8
   m_Name: broom
   m_TagString: broom
@@ -124,6 +125,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefix: 
+--- !u!114 &-5006312207373746458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628851630290792798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a061399dbbdf4479b74991a7ee79cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 0}
+  puddle: {fileID: 0}
 --- !u!1001 &5099971166613254121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,11 +146,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2628851630290792795}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 9f3426f89912031418728595dbabae0d,
-        type: 3}
-      propertyPath: m_Name
-      value: Broom
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9f3426f89912031418728595dbabae0d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -205,6 +215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9f3426f89912031418728595dbabae0d,
+        type: 3}
+      propertyPath: m_Name
+      value: Broom
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 9f3426f89912031418728595dbabae0d,
         type: 3}

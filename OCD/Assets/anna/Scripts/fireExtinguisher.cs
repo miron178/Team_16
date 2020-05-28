@@ -6,8 +6,7 @@ public class fireExtinguisher : MonoBehaviour
 {
     public fireCheck fire;
     public ScoreManager score;
-    public GameObject[] player;
-    public PhysicsController playerT;
+
     private void OnTriggerEnter(Collider other)
     {   
 
@@ -16,7 +15,22 @@ public class fireExtinguisher : MonoBehaviour
             fire.extinguished();
 
             PickUp pickUp = other.gameObject.GetComponent<PickUp>();
-            Debug.Log("player " + pickUp.playerPrefix);
+            if(pickUp.playerPrefix == "P1")
+            {
+                score.IncreaseScore(1, 30);
+            }
+            else if (pickUp.playerPrefix == "P2")
+            {
+                score.IncreaseScore(2, 30);
+            }
+            else if (pickUp.playerPrefix == "P3")
+            {
+                score.IncreaseScore(3, 30);
+            }
+            else if (pickUp.playerPrefix == "P4")
+            {
+                score.IncreaseScore(4, 30);
+            }
         }
 
     }

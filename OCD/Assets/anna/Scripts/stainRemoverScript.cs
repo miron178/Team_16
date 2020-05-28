@@ -4,11 +4,31 @@ using UnityEngine;
 
 public class stainRemoverScript : MonoBehaviour
 {
+    public ScoreManager score;
+    public GameObject dirt;
     private void OnTriggerEnter(Collider other)
     {
-         if (other.gameObject.tag == "stainRemover")
+        if (other.gameObject.tag == "dirt")
         {
-            gameObject.SetActive(false);
+            dirt.SetActive(false);
+
+            PickUp pickUp = other.gameObject.GetComponent<PickUp>();
+            if (pickUp.playerPrefix == "P1")
+            {
+                score.IncreaseScore(1, 10);
+            }
+            else if (pickUp.playerPrefix == "P2")
+            {
+                score.IncreaseScore(2, 10);
+            }
+            else if (pickUp.playerPrefix == "P3")
+            {
+                score.IncreaseScore(3, 10);
+            }
+            else if (pickUp.playerPrefix == "P4")
+            {
+                score.IncreaseScore(4, 10);
+            }
         }
        
     }

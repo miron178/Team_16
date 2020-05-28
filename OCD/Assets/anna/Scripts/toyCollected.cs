@@ -4,11 +4,30 @@ using UnityEngine;
 
 public class toyCollected : MonoBehaviour
 {
+    public ScoreManager score;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "toy")
         {
             Destroy(other.gameObject);
+
+            PickUp pickUp = other.gameObject.GetComponent<PickUp>();
+            if (pickUp.playerPrefix == "P1")
+            {
+                score.IncreaseScore(1, 10);
+            }
+            else if (pickUp.playerPrefix == "P2")
+            {
+                score.IncreaseScore(2, 10);
+            }
+            else if (pickUp.playerPrefix == "P3")
+            {
+                score.IncreaseScore(3, 10);
+            }
+            else if (pickUp.playerPrefix == "P4")
+            {
+                score.IncreaseScore(4, 10);
+            }
         }
         
     }

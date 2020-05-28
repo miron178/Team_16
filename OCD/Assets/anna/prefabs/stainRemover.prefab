@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6116434196088524189}
   - component: {fileID: 3077154854930497732}
   - component: {fileID: 7761559006508949513}
+  - component: {fileID: 212683535951621155}
   m_Layer: 8
   m_Name: stainRemover
   m_TagString: Untagged
@@ -115,6 +116,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &212683535951621155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6382458644180511883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4296de5093da3fb4e8816d907211df8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 0}
+  dirt: {fileID: 0}
 --- !u!1001 &1356860913214886141
 PrefabInstance:
   m_ObjectHideFlags: 0
