@@ -85,6 +85,9 @@ public class PhysicsController : MonoBehaviour {
 #else
 		joint = this.gameObject.AddComponent<FixedJoint>();
 		joint.connectedBody = gameObject.GetComponent<Rigidbody>();
+
+		PickUp pickUp = gameObject.GetComponent<PickUp>();
+		pickUp.playerPrefix = prefix;
 #endif
 	}
 
@@ -95,6 +98,9 @@ public class PhysicsController : MonoBehaviour {
 #else
 		Destroy(joint);
 		joint = null;
+
+		PickUp pickUp = gameObject.GetComponent<PickUp>();
+		pickUp.playerPrefix = null;
 #endif
 	}
 

@@ -14,12 +14,9 @@ public class fireExtinguisher : MonoBehaviour
         if (other.gameObject.tag == "extinguisher")
         {
             fire.extinguished();
-            if (other.gameObject.GetComponent<FixedJoint>().connectedBody.GetComponent<PhysicsController>().prefix == "P2")
-               
-            {
-                Debug.Log("player");
-            }
 
+            PickUp pickUp = other.gameObject.GetComponent<PickUp>();
+            Debug.Log("player " + pickUp.playerPrefix);
         }
 
     }
