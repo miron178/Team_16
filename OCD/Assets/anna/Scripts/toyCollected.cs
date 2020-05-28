@@ -8,7 +8,7 @@ public class toyCollected : MonoBehaviour
     {
         if (other.gameObject.tag == "toy")
         {
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
         }
         
     }

@@ -8,7 +8,8 @@ public class plateCollection : MonoBehaviour
     {
         if (other.gameObject.tag == "plate")
         {
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
+            
         }
 
     }
