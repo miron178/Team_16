@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class randomGenMess : MonoBehaviour
 {
@@ -18,12 +20,16 @@ public class randomGenMess : MonoBehaviour
     public GameObject toy3Prefab;
     public GameObject puddlePrefab;
 
+    [SerializeField]
+    Slider AmountOfMess;
+
+
 
     private void Start()
     {
         if (gameObject.tag == "kitchen")
         {
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < Mathf.Round(AmountOfMess.value / 2); i++)
             {
                 Spawn(dirtPrefab, center, size);
                 Spawn(dirtPrefab, center2, size2);
@@ -32,13 +38,13 @@ public class randomGenMess : MonoBehaviour
         }
         else if (gameObject.tag == "bedroom")
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < Mathf.Round(AmountOfMess.value / 4); i++)
             {
                 Spawn(dirtPrefab, center, size);
                 Spawn(dirtPrefab, center2, size2);
                 Spawn(puddlePrefab, center3, size3);
             }
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < Mathf.Round(AmountOfMess.value / 8); i++)
             {
                 Spawn(toyPrefab, center2, size2);
                 Spawn(toy2Prefab, center2, size2);

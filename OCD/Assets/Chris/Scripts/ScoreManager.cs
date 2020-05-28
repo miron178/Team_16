@@ -24,6 +24,7 @@ public class ScoreManager : MonoBehaviour
     Text TXT_Victory;
 
     string[] STR_Highscores = new string[50];
+    int highScoreOfPlayer = 0; // the highest score
 
     void Start()
     {
@@ -73,7 +74,7 @@ public class ScoreManager : MonoBehaviour
     //find victor and show victory screen
     public void CalculateVictor()
     {
-        int highScoreOfPlayer = 0; // the highest score
+        
         int highScoringPlayer = 0; // the player with the highest score
         
         //run for each player
@@ -86,9 +87,20 @@ public class ScoreManager : MonoBehaviour
                 highScoringPlayer = i; //saves the player number with the highest score
             }
         }
-        if (highScoreOfPlayer == 0)//if all players have 0 highscoreofplayer wont be changed
+
+        int o = 0;
+
+        for (int i = 1; i <= MenuReferance.SL_NumberOfPlayers.value; i++)
         {
-            TXT_Victory.text = "Draw!";
+            if (highScoreOfPlayer == int.Parse(TXT_PlayerScoresArray[i].text))
+            {
+                o++;
+            }
+        }
+
+        if (o == MenuReferance.SL_NumberOfPlayers.value)
+        {
+            TXT_Victory.text = "Draw! you all had : " + highScoreOfPlayer + " Points!";
         }
         else
         {
@@ -97,12 +109,19 @@ public class ScoreManager : MonoBehaviour
             //remove the last 25 chars
             victor = victor.Substring(0, MenuReferance.TXT_IG_PlayerNamesArray[highScoringPlayer].text.Length - 25);
             //update the display
-            TXT_Victory.text = victor + "Wins!!!";
+            TXT_Victory.text = victor + "Wins!!!   With :" + highScoreOfPlayer + " Points!";
         }
         MenuReferance.V_Show();
         ResetAllPlayers();
+
         //WriteScores();
     }
+    
+
+
+
+
+
 
     //write highscores
     //very messy
@@ -142,11 +161,11 @@ public class ScoreManager : MonoBehaviour
     //        if (alternate == true)
     //        {
     //            highscore[IntTeller] = Str_Values;
-                
+
     //            IntTeller++;
     //        }
     //        alternate = !alternate;
-            
+
     //    }
 
     //    //checks if names dont exists to add them

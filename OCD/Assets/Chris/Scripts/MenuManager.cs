@@ -13,8 +13,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     Font myFont;
 
-    string previousPage = null; // maybe change
-    public bool inGame = false; //maybe change
+    string previousPage = null;
+    public bool inGame = false;
     
 
     #region Levels
@@ -132,8 +132,7 @@ public class MenuManager : MonoBehaviour
     Slider SL_amountOfMess;
     [SerializeField]
     Slider SL_DangerFrequency;
-    [SerializeField]
-    Slider SL_NumberOfPlayers;
+    public Slider SL_NumberOfPlayers;
     [SerializeField] // need to load lights into array
     Light[] Lights_Ingame;
 
@@ -157,7 +156,7 @@ public class MenuManager : MonoBehaviour
     private Slider[] GetSliders;
     #endregion
 
-    //need to do something with
+    //Not in use
     #region LeaderBoards
     [Header("Leaderboard")]
     [SerializeField]
