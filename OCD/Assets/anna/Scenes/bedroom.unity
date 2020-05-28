@@ -10653,7 +10653,7 @@ MonoBehaviour:
     type: 3}
   toyPrefab: {fileID: 6975075795285202460, guid: 1bf9d4e948781a34e9e59083e8e9d6ee,
     type: 3}
-  toy2Prefab: {fileID: 6555666558682561556, guid: e4411c2c56b3fa143aacb51c2909bbfd,
+  toy2Prefab: {fileID: 4484706772923183390, guid: 00a67807294e68e4f9b859bbf988ed1c,
     type: 3}
   toy3Prefab: {fileID: 4002281892739526211, guid: c8e108bc067cd4f4abb94e07d2b347bd,
     type: 3}
@@ -13955,7 +13955,7 @@ MonoBehaviour:
     type: 3}
   toyPrefab: {fileID: 6975075795285202460, guid: 1bf9d4e948781a34e9e59083e8e9d6ee,
     type: 3}
-  toy2Prefab: {fileID: 6555666558682561556, guid: e4411c2c56b3fa143aacb51c2909bbfd,
+  toy2Prefab: {fileID: 4484706772923183390, guid: 00a67807294e68e4f9b859bbf988ed1c,
     type: 3}
   toy3Prefab: {fileID: 4002281892739526211, guid: c8e108bc067cd4f4abb94e07d2b347bd,
     type: 3}
@@ -18504,7 +18504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348906294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.025, y: -0.9545, z: 0}
+  m_LocalPosition: {x: -0.025, y: 0.067, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1798589208}
@@ -21526,7 +21526,7 @@ PrefabInstance:
     - target: {fileID: 8114090669757669967, guid: afc9217651e990e4ba27f3c873d8a032,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.96
+      value: -10.09
       objectReference: {fileID: 0}
     - target: {fileID: 8114090669757669967, guid: afc9217651e990e4ba27f3c873d8a032,
         type: 3}
@@ -21593,7 +21593,33 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6116434196088524189, guid: afc9217651e990e4ba27f3c873d8a032,
+        type: 3}
+      propertyPath: m_Height
+      value: 2.3830318
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116434196088524189, guid: afc9217651e990e4ba27f3c873d8a032,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.99660206
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116434196088524189, guid: afc9217651e990e4ba27f3c873d8a032,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.57284606
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116434196088524189, guid: afc9217651e990e4ba27f3c873d8a032,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.07284607
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116434196088524189, guid: afc9217651e990e4ba27f3c873d8a032,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 6.217249e-15
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2286662202484930378, guid: afc9217651e990e4ba27f3c873d8a032, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: afc9217651e990e4ba27f3c873d8a032, type: 3}
 --- !u!1 &1494869613
 GameObject:
