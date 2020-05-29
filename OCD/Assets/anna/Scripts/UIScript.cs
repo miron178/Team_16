@@ -48,8 +48,7 @@ public class UIScript : MonoBehaviour
         seconds = timeLeft % 60;
         //display in text with correct format
         startText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
-        //old :
-        //startText.text = "Time: " + (timeLeft / 100).ToString("0.00"); was 60 not 100
+        //OLD : startText.text = "Time: " + (timeLeft / 100).ToString("0.00"); was 60 not 100
 
         //if timer is 0 or less calculate the victor
         if (timeLeft <= 0)
