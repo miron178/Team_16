@@ -1,14 +1,18 @@
-﻿using System.Collections;
+﻿//made by Anna
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class playerMoveTest : MonoBehaviour
 {
+    //Not used anymore
+
+    //was a simple set up for player movement to test mechanics while player controller was being worked on
     void Update()
     {
-        if (gameObject.tag == "Player")
+        if (gameObject.tag == "Player") //if tag player 1
         {
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A)) //if key pressed
             {
                 transform.Translate(-20f * Time.deltaTime, 0f, 0f);//left
             }
@@ -27,7 +31,7 @@ public class playerMoveTest : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.Z))
             {
-                transform.Translate(0f, 10f * Time.deltaTime, 0f);//down
+                transform.Translate(0f, 10f * Time.deltaTime, 0f);//jump
 
             }
         }
@@ -53,7 +57,7 @@ public class playerMoveTest : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.RightControl))
             {
-                transform.Translate(0f, 10f * Time.deltaTime, 0f);//down
+                transform.Translate(0f, 10f * Time.deltaTime, 0f);//jump
 
             }
         }
@@ -79,7 +83,7 @@ public class playerMoveTest : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.KeypadEnter))
             {
-                transform.Translate(0f, 10f * Time.deltaTime, 0f);//down
+                transform.Translate(0f, 10f * Time.deltaTime, 0f);//jump
 
             }
         }
@@ -105,7 +109,7 @@ public class playerMoveTest : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.Space))
             {
-                transform.Translate(0f, 10f * Time.deltaTime, 0f);//down
+                transform.Translate(0f, 10f * Time.deltaTime, 0f);//jump
 
             }
         }

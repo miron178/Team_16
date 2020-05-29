@@ -1,33 +1,34 @@
-﻿using System.Collections;
+﻿//created by anna
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class removeAsh : MonoBehaviour
 {
-    public ash ashDust;
-    public ScoreManager score;
+    public ash ashDust; //ash gameobject
+    public ScoreManager score; //link to score manager script
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "wipe")
+        if (other.tag == "wipe") //if object entered is tagged as wipe
         {
-            ashDust.cleaned();
+            ashDust.cleaned(); //run function
 
-            PickUp pickUp = other.gameObject.GetComponent<PickUp>();
-            if (pickUp.playerPrefix == "P1")
+            PickUp pickUp = other.gameObject.GetComponent<PickUp>();//get the prefix of the held object
+            if (pickUp.playerPrefix == "P1") //if the prefix is player 1
             {
-                score.IncreaseScore(1, 30);
+                score.IncreaseScore(1, 30); //tell the score manager and increaase by 30
             }
-            else if (pickUp.playerPrefix == "P2")
+            else if (pickUp.playerPrefix == "P2") //if the prefix is player 2
             {
-                score.IncreaseScore(2, 30);
+                score.IncreaseScore(2, 30);//tell the score manager and increaase by 30
             }
-            else if (pickUp.playerPrefix == "P3")
+            else if (pickUp.playerPrefix == "P3") //if the prefix is player 3
             {
-                score.IncreaseScore(3, 30);
+                score.IncreaseScore(3, 30);//tell the score manager and increaase by 30
             }
-            else if (pickUp.playerPrefix == "P4")
+            else if (pickUp.playerPrefix == "P4") //if the prefix is player 4
             {
-                score.IncreaseScore(4, 30);
+                score.IncreaseScore(4, 30);//tell the score manager and increaase by 30
             }
         }
     }

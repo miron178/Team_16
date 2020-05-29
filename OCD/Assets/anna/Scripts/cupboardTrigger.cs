@@ -1,29 +1,30 @@
-﻿using System.Collections;
+﻿//made by anna 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class cupboardTrigger : MonoBehaviour
 {
-    public openDoor trigger;
-    public closeDoor trigger2;
-    private void OnTriggerEnter(Collider other)
+    public openDoor trigger; //creates link to open door script
+    public closeDoor trigger2; //creates link to close door script
+    private void OnTriggerEnter(Collider other) //if entered the trigger
     {
-        if (other.gameObject.tag != "Player")
+        if (other.gameObject.tag != "Player") //if not player
         {
-            return;
+            return; //end
         }
-        trigger.entered = true;
-        trigger2.entered = true;
+        trigger.entered = true; //set bool to true
+        trigger2.entered = true; //set bool to true
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other) //if exited the trigger
     {
-        if (other.gameObject.tag != "Player")
+        if (other.gameObject.tag != "Player") //if not player
         {
-            return;
+            return; //end
         }
 
-        trigger.endDoorOpen();
-        trigger2.endCloseDoor();
+        trigger.endDoorOpen(); //activate function
+        trigger2.endCloseDoor(); //activate function
     }
 }

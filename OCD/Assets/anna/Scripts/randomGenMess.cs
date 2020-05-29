@@ -1,18 +1,19 @@
-﻿using System.Collections;
+﻿//made by anna, edited and improved by chris
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class randomGenMess : MonoBehaviour
-{
+{//create position and size vectors
     public Vector3 center;
     public Vector3 size;
     public Vector3 center2;
     public Vector3 size2;
     public Vector3 center3;
     public Vector3 size3;
-
+    //gameobjects for all the objects that will be randomly generated
     public GameObject dirtPrefab;
     public GameObject platePrefab;
     public GameObject toyPrefab;
