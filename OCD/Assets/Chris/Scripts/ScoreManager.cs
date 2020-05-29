@@ -88,20 +88,23 @@ public class ScoreManager : MonoBehaviour
             }
         }
 
-        int o = 0;
+        int MatchingHighscores = 0;
 
+        // loop for each player in the game
         for (int i = 1; i <= MenuReferance.SL_NumberOfPlayers.value; i++)
         {
+            //if the high score is the same as another player increase number of matching scores
             if (highScoreOfPlayer == int.Parse(TXT_PlayerScoresArray[i].text))
             {
-                o++;
+                MatchingHighscores++;
             }
         }
-
-        if (o == MenuReferance.SL_NumberOfPlayers.value)
+        //if all the players scores are the same as the highscore show draw
+        if (MatchingHighscores == MenuReferance.SL_NumberOfPlayers.value)
         {
             TXT_Victory.text = "Draw! you all had : " + highScoreOfPlayer + " Points!";
         }
+        //if its not a draw someone must have won
         else
         {
             //assign the winners name to a string
@@ -109,8 +112,9 @@ public class ScoreManager : MonoBehaviour
             //remove the last 25 chars
             victor = victor.Substring(0, MenuReferance.TXT_IG_PlayerNamesArray[highScoringPlayer].text.Length - 25);
             //update the display
-            TXT_Victory.text = victor + "Wins!!!   With :" + highScoreOfPlayer + " Points!";
+            TXT_Victory.text = victor + "Wins!!!   With : " + highScoreOfPlayer + " Points!";
         }
+        //show the victory screen and reset player scores
         MenuReferance.V_Show();
         ResetAllPlayers();
 
@@ -118,8 +122,7 @@ public class ScoreManager : MonoBehaviour
     }
     
 
-
-
+    //Old Not in use 
 
 
 

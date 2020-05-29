@@ -20,6 +20,7 @@ public class randomGenMess : MonoBehaviour
     public GameObject toy3Prefab;
     public GameObject puddlePrefab;
 
+    //referance the mess slider
     [SerializeField]
     Slider AmountOfMess;
 
@@ -29,8 +30,10 @@ public class randomGenMess : MonoBehaviour
     {
         if (gameObject.tag == "kitchen")
         {
+            //use the mess slider to calculate amount of times to run
             for (int i = 0; i < Mathf.Round(AmountOfMess.value / 2); i++)
             {
+                //spawn a prefab at positon Center within Size
                 Spawn(dirtPrefab, center, size);
                 Spawn(dirtPrefab, center2, size2);
                 Spawn(platePrefab, center3, size3);
@@ -57,8 +60,11 @@ public class randomGenMess : MonoBehaviour
 
     public void Spawn(GameObject Prefab, Vector3 Center, Vector3 Size)
     {
+        //get the position of the object that will be spawned
         Vector3 position = Center + new Vector3(Random.Range(-Size.x / 2, Size.x / 2), Random.Range(-Size.y / 2, Size.y / 2), Random.Range(-Size.z / 2, Size.z / 2));
+        //declare object to spawn
         GameObject SpawnObject = Instantiate(Prefab, position, Quaternion.identity);
+        //set parent of spawned object
         SpawnObject.transform.parent = transform;
     }
 
