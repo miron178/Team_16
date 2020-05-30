@@ -11317,7 +11317,6 @@ Transform:
   - {fileID: 1426245752}
   - {fileID: 1508812157}
   - {fileID: 1798589208}
-  - {fileID: 1620829761}
   m_Father: {fileID: 529761642}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
@@ -23457,12 +23456,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610136159}
   m_CullTransparentMesh: 0
---- !u!4 &1620829761 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-    type: 3}
-  m_PrefabInstance: {fileID: 264921786706285971}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1624311347 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2628851630290792798, guid: c967bcec85d6dd2418271496391ae57e,
@@ -30500,110 +30493,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fire: {fileID: 1661319225}
   countdown: 10
---- !u!1001 &264921786706285971
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 852760115}
-    m_Modifications:
-    - target: {fileID: 264921788309844947, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_Name
-      value: wipe
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 113.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844946, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702592792529697269, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: wettedWipe
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 264921788309844949, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: des
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088776476843473788, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6642491250861339086, guid: d60284873d97c804eb0912095a1eccad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d60284873d97c804eb0912095a1eccad, type: 3}
 --- !u!1001 &2219289084012974412
 PrefabInstance:
   m_ObjectHideFlags: 0
