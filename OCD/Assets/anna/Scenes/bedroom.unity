@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puddle: {fileID: 1998999581}
-  score: {fileID: 0}
+  score: {fileID: 1349718375}
 --- !u!65 &79922055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2818,6 +2818,7 @@ GameObject:
   - component: {fileID: 246846125}
   - component: {fileID: 246846124}
   - component: {fileID: 246846127}
+  - component: {fileID: 246846128}
   m_Layer: 8
   m_Name: wrench
   m_TagString: wrench
@@ -2914,6 +2915,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &246846128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246846122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c9691675dbcbc41ab409235104e982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefix: 
 --- !u!4 &254943083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 3af3a2fae9f56f84a95c4429d1389698,
@@ -6722,7 +6736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &529761642
 Transform:
   m_ObjectHideFlags: 0
@@ -7897,7 +7911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &640330556
 Transform:
   m_ObjectHideFlags: 0
@@ -11621,6 +11635,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437529875074153057, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626464405297153663, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
         type: 3}
@@ -17300,6 +17329,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437529875074153057, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626464405297153663, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18486,6 +18530,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437529875074153057, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626464405297153663, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
         type: 3}
@@ -19925,6 +19984,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437529875074153057, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626464405297153663, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6b5e47f44456f754f8d6ebb7250a57aa,
         type: 3}
