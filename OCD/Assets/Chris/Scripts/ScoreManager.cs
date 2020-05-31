@@ -29,12 +29,13 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         MenuReferance = GetComponent<MenuManager>(); // set referance
-        //load array
+        //load values into array
         TXT_PlayerScoresArray[1] = TXT_IG_PlayerOneScore;
         TXT_PlayerScoresArray[2] = TXT_IG_PlayerTwoScore;
         TXT_PlayerScoresArray[3] = TXT_IG_PlayerThreeScore;
         TXT_PlayerScoresArray[4] = TXT_IG_PlayerFourScore;
     }
+
 
     //increase the score of a target player
     public void IncreaseScore(int PlayerNumber, int IncreaseAmount)
