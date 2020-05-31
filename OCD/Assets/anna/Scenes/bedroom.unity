@@ -4274,7 +4274,7 @@ MonoBehaviour:
   spillagePos: {fileID: 1348906295}
   spillage: {fileID: 6212607172430184965, guid: 6ec694512fa11f141a319329ffee2623,
     type: 3}
-  score: {fileID: 0}
+  score: {fileID: 1349718375}
 --- !u!1 &342745808
 GameObject:
   m_ObjectHideFlags: 0
@@ -6524,6 +6524,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496724253}
   m_CullTransparentMesh: 0
+--- !u!1 &499822065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 499822066}
+  - component: {fileID: 499822069}
+  - component: {fileID: 499822068}
+  - component: {fileID: 499822067}
+  m_Layer: 0
+  m_Name: floorTrigger (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &499822066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499822065}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.5, y: -9.39, z: 37}
+  m_LocalScale: {x: 20, y: 0.01, z: 30}
+  m_Children: []
+  m_Father: {fileID: 352764833}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499822067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499822065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69f0d1936259e749ba3b0008bdb6fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spillagePos: {fileID: 1348906295}
+  spillage: {fileID: 6212607172430184965, guid: 6ec694512fa11f141a319329ffee2623,
+    type: 3}
+  score: {fileID: 1349718375}
+--- !u!65 &499822068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499822065}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!33 &499822069
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499822065}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &507696977 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 3af3a2fae9f56f84a95c4429d1389698,
@@ -8717,7 +8787,7 @@ MonoBehaviour:
   spillagePos: {fileID: 355081686}
   spillage: {fileID: 6212607172430184965, guid: 6ec694512fa11f141a319329ffee2623,
     type: 3}
-  score: {fileID: 0}
+  score: {fileID: 1349718375}
 --- !u!65 &665127794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17507,6 +17577,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281241394}
   m_CullTransparentMesh: 0
+--- !u!1 &1284564417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1284564418}
+  - component: {fileID: 1284564421}
+  - component: {fileID: 1284564420}
+  - component: {fileID: 1284564419}
+  m_Layer: 0
+  m_Name: floorTrigger (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1284564418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284564417}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.5, y: -9.39, z: 64.4}
+  m_LocalScale: {x: 20, y: 0.01, z: 30}
+  m_Children: []
+  m_Father: {fileID: 352764833}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1284564419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284564417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69f0d1936259e749ba3b0008bdb6fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spillagePos: {fileID: 1348906295}
+  spillage: {fileID: 6212607172430184965, guid: 6ec694512fa11f141a319329ffee2623,
+    type: 3}
+  score: {fileID: 1349718375}
+--- !u!65 &1284564420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284564417}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!33 &1284564421
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284564417}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1287719465
 GameObject:
   m_ObjectHideFlags: 0
@@ -28545,7 +28685,7 @@ MonoBehaviour:
   spillagePos: {fileID: 355081686}
   spillage: {fileID: 6212607172430184965, guid: 6ec694512fa11f141a319329ffee2623,
     type: 3}
-  score: {fileID: 0}
+  score: {fileID: 1349718375}
 --- !u!65 &1992360126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30089,7 +30229,7 @@ MonoBehaviour:
   spillagePos: {fileID: 355081686}
   spillage: {fileID: 6212607172430184965, guid: 6ec694512fa11f141a319329ffee2623,
     type: 3}
-  score: {fileID: 0}
+  score: {fileID: 1349718375}
 --- !u!65 &2098697279
 BoxCollider:
   m_ObjectHideFlags: 0
