@@ -729,6 +729,7 @@ public class MenuManager : MonoBehaviour
         if (SL_NumberOfPlayers.value == 3)
         {
             GO_PM_PlayerThree.SetActive(true);
+            TXT_IG_playerThreeNameDisplay.gameObject.SetActive(true);
             GO_PM_PlayerFour.SetActive(false);
             TXT_IG_playerFourNameDisplay.gameObject.SetActive(false);
 
@@ -743,7 +744,9 @@ public class MenuManager : MonoBehaviour
         if (SL_NumberOfPlayers.value == 4)
         {
             GO_PM_PlayerThree.SetActive(true);
+            TXT_IG_playerThreeNameDisplay.gameObject.SetActive(true);
             GO_PM_PlayerFour.SetActive(true);
+            TXT_IG_playerFourNameDisplay.gameObject.SetActive(true);
 
             PlayerFourLevelOne.SetActive(true);
             PlayerFourLevelTwo.SetActive(true);
